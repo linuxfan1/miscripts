@@ -1,3 +1,4 @@
+
 var currentversion = "v3.5"
 var redirectlocation = ""
 var windowlocation = ""
@@ -12,7 +13,6 @@ var pdurl7 = "https://classroom.google.com/u/0/c/" + getCookie('period7');
 var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
 var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
 var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -28,7 +28,6 @@ function getCookie(cname) {
     }
     return "";
 }
-
 function firstrunFunction() {
     document.getElementById('pd1').value = getCookie("period1")
     document.getElementById('pd2').value = getCookie("period2")
@@ -42,7 +41,6 @@ function firstrunFunction() {
     document.getElementById('pd10').value = getCookie("period10")
     document.getElementById('Pdls').className = "firstrun";
 }
-
 function firstrunFunction2() {
     var pdv1 = document.getElementById('pd1').value
     var pdv2 = document.getElementById('pd2').value
@@ -178,16 +176,15 @@ function firstrunFunction2() {
     } else if (document.getElementById('period10typescience').checked == true) {
         document.cookie = "period10type=science; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     } else if (document.getElementById('period10typeother').checked == true) {
-        document.cookie = "period1t0ype=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else if (document.getElementById('period1t0ypecustom').checked == true) {
-        document.cookie = "period1t0ype=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-        document.cookie = "period1c0ustomurl=" + document.getElementById('period1c0ustomurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
+        document.cookie = "period10type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
+    } else if (document.getElementById('period10typecustom').checked == true) {
+        document.cookie = "period10type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
+        document.cookie = "period10customurl=" + document.getElementById('period10customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     } else {
-        document.cookie = "period1t0ype=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
+        document.cookie = "period10type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     location.reload()
 }
-
 function pageLoad() {
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').innerHTML = "Please complete the first run setup below."
@@ -201,20 +198,6 @@ function pageLoad() {
         }
     }
 }
-
-function pageLoadDelay() {
-    if (getCookie('firstrun') == "") {
-        document.getElementById('Pdls').className = "firstrun";
-    } else if (getCookie('firstrun') != "") {
-        if (getCookie('firstrun') != currentversion) {
-            document.getElementById('Status').innerHTML = "TBC " + getCookie('firstrun') + " detected. The current version is " + currentversion + ". <s>Please complete the firstrun form <a class="disabled" href=''>here</a></s> Rewriter is not available on non-github versions."
-            document.getElementById('Pdls').className = "firstrun";
-        } else {
-            return classroomLoad();
-        }
-    }
-}
-
 function period1() {
     period = "1st"
     if (getCookie('period1type') != '') {
@@ -235,7 +218,6 @@ function period1() {
         redirectlocation = pdurl1
     }
 }
-
 function period2() {
     period = "2nd"
     if (getCookie('period2type') != '') {
@@ -256,7 +238,6 @@ function period2() {
         redirectlocation = pdurl2
     }
 }
-
 function period3() {
     period = "3rd"
     if (getCookie('period3type') != '') {
@@ -277,7 +258,6 @@ function period3() {
         redirectlocation = pdurl3
     }
 }
-
 function period4() {
     period = "4th"
     if (getCookie('period4type') != '') {
@@ -298,7 +278,6 @@ function period4() {
         redirectlocation = pdurl4
     }
 }
-
 function period5() {
     period = "5th"
     if (getCookie('period5type') != '') {
@@ -319,7 +298,6 @@ function period5() {
         redirectlocation = pdurl5
     }
 }
-
 function period6() {
     period = "6th"
     if (getCookie('period6type') != '') {
@@ -340,7 +318,6 @@ function period6() {
         redirectlocation = pdurl6
     }
 }
-
 function period7() {
     period = "7th"
     if (getCookie('period7type') != '') {
@@ -361,7 +338,6 @@ function period7() {
         redirectlocation = pdurl7
     }
 }
-
 function period8() {
     period = "8th"
     if (getCookie('period8type') != '') {
@@ -382,7 +358,6 @@ function period8() {
         redirectlocation = pdurl8
     }
 }
-
 function period9() {
     period = "9th"
     if (getCookie('period9type') != '') {
@@ -403,7 +378,6 @@ function period9() {
         redirectlocation = pdurl9
     }
 }
-
 function period10() {
     period = "10th"
     if (getCookie('period10type') != '') {
@@ -424,10 +398,9 @@ function period10() {
         redirectlocation = pdurl10
     }
 }
-
 function visibility() {
-    document.getElementById('confirmation').style.visibility = "visible";
-    document.getElementById('confirmationtext').innerHTML = "Press 'Ok' to continue to the " + period + " period classroom."
+        document.getElementById('confirmation').style.visibility = "visible";
+        document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom."
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
         document.getElementById('confirmation').style.visibility = "visible";
         document.getElementById("confirmationbutton").style.visibility = "hidden";
@@ -436,7 +409,6 @@ function visibility() {
         document.getElementById('confirmation').style.visibility = "visible";
     }
 }
-
 function confirmRedirect() {
     if (windowlocation != "") {
         window.open(windowlocation);
@@ -444,4 +416,77 @@ function confirmRedirect() {
     } else {
         window.location.assign(redirectlocation);
     }
+}
+function pageDebug() {
+    document.getElementById('btnd').innerHTML = windowlocation
+}
+function classroomLoad() {
+    document.getElementById('Status').innerHTML = ""
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    if (h == "7") {
+        if (m >= 30) {
+           return period1();
+        }
+    } else if (h == 8) {
+        if (m <= 13) {
+            return period1();
+        } else if (m >= 14) {
+            if (m <= 56) {
+                return period2();
+            } else {
+                return period3();
+            }
+        }
+    } else if (h == 9) {
+        if (m <= 37) {
+            return period3();
+        } else if (m >= 38) {
+            return period4();
+        }
+    } else if (h == 10) {
+        if (m <= 22) {
+            return period4();
+        } else {
+            return period5();
+        }
+    } else if (h == 11) {
+        if (m <= 4) {
+            return period5();
+        } else if (m >= 5) {
+            if (m <= 47) {
+                return period6();
+            }
+        } else if (m >= 48) {
+            return period7();
+        }
+    } else if (h == 12) {
+        if (m <= 31) {
+            return period7();
+        } else if (m >= 32) {
+            return period8();
+        }
+    } else if (h == 13) {
+        if (m <= 14) {
+            return period8();
+        } else if (m >= 15) {
+            return period9();
+        }
+    } else if (h == 14) {
+        if (m <= 34) {
+            return period10();
+        } else {
+            alert("Classes are done for the day. Please try again tomorrow.");
+            document.getElementById('Status').innerHTML = "";
+        }
+    } else {
+        alert("Classes are done for the day. Please try again tomorrow.");
+        document.getElementById('Status').innerHTML = "";
+    }
+}
+
+function scriptSuccess() {
+    return pageTime();
+    document.getElementById('Status').innerHTML = "";
 }

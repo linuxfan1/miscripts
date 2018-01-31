@@ -202,6 +202,19 @@ function pageLoad() {
     }
 }
 
+function pageLoadDelay() {
+    if (getCookie('firstrun') == "") {
+        document.getElementById('Pdls').className = "firstrun";
+    } else if (getCookie('firstrun') != "") {
+        if (getCookie('firstrun') != currentversion) {
+            document.getElementById('Status').innerHTML = "TBC " + getCookie('firstrun') + " detected. The current version is " + currentversion + ". <s>Please complete the firstrun form <a class="disabled" href=''>here</a></s> Rewriter is not available on non-github versions."
+            document.getElementById('Pdls').className = "firstrun";
+        } else {
+            return classroomLoad();
+        }
+    }
+}
+
 function period1() {
     period = "1st"
     if (getCookie('period1type') != '') {

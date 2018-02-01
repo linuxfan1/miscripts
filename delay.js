@@ -2,6 +2,36 @@
 var currentversion = "v3.6"
 var redirectlocation = ""
 var windowlocation = ""
+if (getCookie('period1')=="") {
+    document.getElementById('period1div').style.visibility = hidden;
+}
+if (getCookie('period2')=="") {
+    document.getElementById('period2div').style.visibility = hidden;
+}
+if (getCookie('period3')=="") {
+    document.getElementById('period3div').style.visibility = hidden;
+}
+if (getCookie('period4')=="") {
+    document.getElementById('period4div').style.visibility = hidden;
+}
+if (getCookie('period5')=="") {
+    document.getElementById('period5div').style.visibility = hidden;
+}
+if (getCookie('period6')=="") {
+    document.getElementById('period6div').style.visibility = hidden;
+}
+if (getCookie('period7')=="") {
+    document.getElementById('period7div').style.visibility = hidden;
+}
+if (getCookie('period8')=="") {
+    document.getElementById('period8div').style.visibility = hidden;
+}
+if (getCookie('period9')=="") {
+    document.getElementById('period9div').style.visibility = hidden;
+}
+if (getCookie('period10')=="") {
+    document.getElementById('period10div').style.visibility = hidden;
+}
 var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');
 var pdurl2 = "https://classroom.google.com/u/0/c/" + getCookie('period2');
 var pdurl3 = "https://classroom.google.com/u/0/c/" + getCookie('period3');

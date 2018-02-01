@@ -1,5 +1,5 @@
 
-var currentversion = "v3.5"
+var currentversion = "v3.6"
 var redirectlocation = ""
 var windowlocation = ""
 var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');

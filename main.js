@@ -1,5 +1,5 @@
 
-var currentversion = "v3.5";
+var currentversion = "v3.6";
 var redirectlocation = "";
 var windowlocation = "";
 var period = "";

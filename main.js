@@ -1,8 +1,8 @@
 
-var currentversion = "v3.5"
-var redirectlocation = ""
-var windowlocation = ""
-var period = ""
+var currentversion = "v3.5";
+var redirectlocation = "";
+var windowlocation = "";
+var period = "";
 var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');
 var pdurl2 = "https://classroom.google.com/u/0/c/" + getCookie('period2');
 var pdurl3 = "https://classroom.google.com/u/0/c/" + getCookie('period3');
@@ -29,16 +29,16 @@ function getCookie(cname) {
     return "";
 }
 function firstrunFunction() {
-    document.getElementById('pd1').value = getCookie("period1")
-    document.getElementById('pd2').value = getCookie("period2")
-    document.getElementById('pd3').value = getCookie("period3")
-    document.getElementById('pd4').value = getCookie("period4")
-    document.getElementById('pd5').value = getCookie("period5")
-    document.getElementById('pd6').value = getCookie("period6")
-    document.getElementById('pd7').value = getCookie("period7")
-    document.getElementById('pd8').value = getCookie("period8")
-    document.getElementById('pd9').value = getCookie("period9")
-    document.getElementById('pd10').value = getCookie("period10")
+    document.getElementById('pd1').value = getCookie("period1");
+    document.getElementById('pd2').value = getCookie("period2");
+    document.getElementById('pd3').value = getCookie("period3");
+    document.getElementById('pd4').value = getCookie("period4");
+    document.getElementById('pd5').value = getCookie("period5");
+    document.getElementById('pd6').value = getCookie("period6");
+    document.getElementById('pd7').value = getCookie("period7");
+    document.getElementById('pd8').value = getCookie("period8");
+    document.getElementById('pd9').value = getCookie("period9");
+    document.getElementById('pd10').value = getCookie("period10");
     document.getElementById('Pdls').className = "firstrun";
 }
 function firstrunFunction2() {
@@ -173,15 +173,15 @@ function firstrunFunction2() {
     } else {
         document.cookie = "period10type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
-    location.reload()
+    location.reload();
 }
 function pageLoad() {
     if (getCookie('firstrun') == "") {
-        document.getElementById('Status').innerHTML = "Please complete the first run setup below."
+        document.getElementById('Status').innerHTML = "Please complete the first run setup below.";
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
-            document.getElementById('Status').innerHTML = "TBC " + getCookie('firstrun') + " detected. The current version is " + currentversion + ", please recomplete the form."
+            document.getElementById('Status').innerHTML = "TBC " + getCookie('firstrun') + " detected. The current version is " + currentversion + ", please recomplete the form.";
             return firstrunFunction();
         } else {
             return classroomLoad();
@@ -189,97 +189,97 @@ function pageLoad() {
     }
 }
 function period1() {
-    period = "1st"
+    period = "1st";
     if (getCookie('period1type') != '') {
-        redirectlocation = pdurl1
+        redirectlocation = pdurl1;
         if (getCookie('period1type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period1type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period1type') == 'custom') {
-            redirectlocation = getCookie('period1customurl')
+            redirectlocation = getCookie('period1customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl1
+        redirectlocation = pdurl1;
     }
 }
 function period2() {
-    period = "2nd"
+    period = "2nd";
     if (getCookie('period2type') != '') {
-        redirectlocation = pdurl2
+        redirectlocation = pdurl2;
         if (getCookie('period2type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period2type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period2type') == 'custom') {
-            redirectlocation = getCookie('period2customurl')
+            redirectlocation = getCookie('period2customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl2
+        redirectlocation = pdurl2;
     }
 }
 function period3() {
-    period = "3rd"
+    period = "3rd";
     if (getCookie('period3type') != '') {
-        redirectlocation = pdurl3
+        redirectlocation = pdurl3;
         if (getCookie('period3type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period3type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period3type') == 'custom') {
-            redirectlocation = getCookie('period3customurl')
+            redirectlocation = getCookie('period3customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl3
+        redirectlocation = pdurl3;
     }
 }
 function period4() {
-    period = "4th"
+    period = "4th";
     if (getCookie('period4type') != '') {
-        redirectlocation = pdurl4
+        redirectlocation = pdurl4;
         if (getCookie('period4type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period4type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period4type') == 'custom') {
-            redirectlocation = getCookie('period4customurl')
+            redirectlocation = getCookie('period4customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl4
+        redirectlocation = pdurl4;
     }
 }
 function period5() {
-    period = "5th"
+    period = "5th";
     if (getCookie('period5type') != '') {
-        redirectlocation = pdurl5
+        redirectlocation = pdurl5;
         if (getCookie('period5type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period5type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period5type') == 'custom') {
-            redirectlocation = getCookie('period5customurl')
+            redirectlocation = getCookie('period5customurl');
             return visibility();
         } else {
             return visibility();
@@ -289,112 +289,112 @@ function period5() {
     }
 }
 function period6() {
-    period = "6th"
+    period = "6th";
     if (getCookie('period6type') != '') {
-        redirectlocation = pdurl6
+        redirectlocation = pdurl6;
         if (getCookie('period6type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period6type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period6type') == 'custom') {
-            redirectlocation = getCookie('period6customurl')
+            redirectlocation = getCookie('period6customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl6
+        redirectlocation = pdurl6;
     }
 }
 function period7() {
-    period = "7th"
+    period = "7th";
     if (getCookie('period7type') != '') {
-        redirectlocation = pdurl7
+        redirectlocation = pdurl7;
         if (getCookie('period7type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period7type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period7type') == 'custom') {
-            redirectlocation = getCookie('period7customurl')
+            redirectlocation = getCookie('period7customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl7
+        redirectlocation = pdurl7;
     }
 }
 function period8() {
-    period = "8th"
+    period = "8th";
     if (getCookie('period8type') != '') {
-        redirectlocation = pdurl8
+        redirectlocation = pdurl8;
         if (getCookie('period8type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period8type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period8type') == 'custom') {
-            redirectlocation = getCookie('period8customurl')
+            redirectlocation = getCookie('period8customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl8
+        redirectlocation = pdurl8;
     }
 }
 function period9() {
-    period = "9th"
+    period = "9th";
     if (getCookie('period9type') != '') {
-        redirectlocation = pdurl9
+        redirectlocation = pdurl9;
         if (getCookie('period9type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period9type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period9type') == 'custom') {
-            redirectlocation = getCookie('period9customurl')
+            redirectlocation = getCookie('period9customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl9
+        redirectlocation = pdurl9;
     }
 }
 function period10() {
-    period = "10th"
+    period = "10th";
     if (getCookie('period10type') != '') {
-        redirectlocation = pdurl10
+        redirectlocation = pdurl10;
         if (getCookie('period10type') == 'math') {
-            windowlocation = 'https://www.pearsonsuccessnet.com/'
+            windowlocation = 'https://www.pearsonsuccessnet.com/';
             return visibility();
         } else if (getCookie('period10type') == 'science') {
-            windowlocation = 'https://my.hrw.com/'
+            windowlocation = 'https://my.hrw.com/';
             return visibility();
         } else if (getCookie('period10type') == 'custom') {
-            redirectlocation = getCookie('period10customurl')
+            redirectlocation = getCookie('period10customurl');
             return visibility();
         } else {
             return visibility();
         }
     } else {
-        redirectlocation = pdurl10
+        redirectlocation = pdurl10;
     }
 }
 function visibility() {
         document.getElementById('confirmation').style.visibility = "visible";
-        document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom."
+        document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
         document.getElementById('confirmation').style.visibility = "visible";
         document.getElementById("confirmationbutton").style.visibility = "hidden";
-        document.getElementById("confirmationtext").innerHTML = "No code was specified for this period.<s> If this is incorrect, rewrite it <a class="disabled" href='/TBC/cookiewriter'>here</a></s>.";
+        document.getElementById("confirmationtext").innerHTML = "No code was specified for this period.<s> If this is incorrect, rewrite it <a class='disabled' href='/TBC/cookiewriter'>here</a></s>.";
     } else {
         document.getElementById('confirmation').style.visibility = "visible";
     }
@@ -408,7 +408,7 @@ function confirmRedirect() {
     }
 }
 function classroomLoad() {
-    document.getElementById('Status').innerHTML = ""
+    document.getElementById('Status').innerHTML = "";
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
@@ -471,9 +471,4 @@ function classroomLoad() {
         alert("Classes are done for the day. Please try again tomorrow.");
         document.getElementById('Status').innerHTML = "";
     }
-}
-
-function scriptSuccess() {
-    return pageTime();
-    document.getElementById('Status').innerHTML = "";
 }

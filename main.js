@@ -27,6 +27,9 @@ function getCookie(cname) {
     }
     return "";
 }
+if (getCookie('debug') == true) {
+    document.getElementById('debugstatus').innerHTML = "Debug Enabled"
+}
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)
     if (document.getElementById('debug').value == "p7AzSwqbPe2vBeMHedwMYA") {

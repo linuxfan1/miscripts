@@ -3,6 +3,36 @@ var currentversion = "v3.6";
 var redirectlocation = "";
 var windowlocation = "";
 var period = "";
+if (getCookie('period1')=="") {
+    document.getElementById('period1div').style.visibility = hidden;
+}
+if (getCookie('period2')=="") {
+    document.getElementById('period2div').style.visibility = hidden;
+}
+if (getCookie('period3')=="") {
+    document.getElementById('period3div').style.visibility = hidden;
+}
+if (getCookie('period4')=="") {
+    document.getElementById('period4div').style.visibility = hidden;
+}
+if (getCookie('period5')=="") {
+    document.getElementById('period5div').style.visibility = hidden;
+}
+if (getCookie('period6')=="") {
+    document.getElementById('period6div').style.visibility = hidden;
+}
+if (getCookie('period7')=="") {
+    document.getElementById('period7div').style.visibility = hidden;
+}
+if (getCookie('period8')=="") {
+    document.getElementById('period8div').style.visibility = hidden;
+}
+if (getCookie('period9')=="") {
+    document.getElementById('period9div').style.visibility = hidden;
+}
+if (getCookie('period10')=="") {
+    document.getElementById('period10div').style.visibility = hidden;
+}
 var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');
 var pdurl2 = "https://classroom.google.com/u/0/c/" + getCookie('period2');
 var pdurl3 = "https://classroom.google.com/u/0/c/" + getCookie('period3');
@@ -40,56 +70,6 @@ function firstrunFunction() {
     document.getElementById('pd9').value = getCookie("period9");
     document.getElementById('pd10').value = getCookie("period10");
     document.getElementById('Pdls').className = "firstrun";
-    if (document.getElementById('pd1').value != "") {
-        document.getElementById('period1div').style.display = "none";
-    } else {
-        document.getElementById('period1div').style.display = "inline";
-    }
-    if (document.getElementById('pd2').value != "") {
-        document.getElementById('period2div').style.display = "none";
-    } else {
-        document.getElementById('period2div').style.display = "inline";
-    }
-    if (document.getElementById('pd3').value != "") {
-        document.getElementById('period3div').style.display = "none";
-    } else {
-        document.getElementById('period3div').style.display = "inline";
-    }
-    if (document.getElementById('pd4').value != "") {
-        document.getElementById('period4div').style.display = "none";
-    } else {
-        document.getElementById('period4div').style.display = "inline";
-    }
-    if (document.getElementById('pd5').value != "") {
-        document.getElementById('period5div').style.display = "none";
-    } else {
-        document.getElementById('period5div').style.display = "inline";
-    }
-    if (document.getElementById('pd6').value != "") {
-        document.getElementById('period6div').style.display = "none";
-    } else {
-        document.getElementById('period6div').style.display = "inline";
-    }
-    if (document.getElementById('pd7').value != "") {
-        document.getElementById('period7div').style.display = "none";
-    } else {
-        document.getElementById('period7div').style.display = "inline";
-    }
-    if (document.getElementById('pd8').value != "") {
-        document.getElementById('period8div').style.display = "none";
-    } else {
-        document.getElementById('period8div').style.display = "inline";
-    }
-    if (document.getElementById('pd9').value != "") {
-        document.getElementById('period9div').style.display = "none";
-    } else {
-        document.getElementById('period9div').style.display = "inline";
-    }
-    if (document.getElementById('pd10').value != "") {
-        document.getElementById('period10div').style.display = "none";
-    } else {
-        document.getElementById('period10div').style.display = "inline";
-    }
 }
 function firstrunFunction2() {
     document.cookie = "firstrun=" + currentversion + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
@@ -439,15 +419,14 @@ function period10() {
     }
 }
 function visibility() {
-        document.getElementById('confirmation').style.display = "inline";
+        document.getElementById('confirmation').style.visibility = "visible";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
-        //document.getElementById('confirmationtext').innerHTML = redirectlocation;
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
-        document.getElementById('confirmation').style.display = "inline";
-        document.getElementById("confirmationbutton").style.display = "none";
+        document.getElementById('confirmation').style.visibility = "visible";
+        document.getElementById("confirmationbutton").style.visibility = "hidden";
         document.getElementById("confirmationtext").innerHTML = "No code was specified for this period.<s> If this is incorrect, rewrite it <a class='disabled' href='/TBC/cookiewriter'>here</a></s>.";
     } else {
-        document.getElementById('confirmation').style.display = "inline";
+        document.getElementById('confirmation').style.visibility = "visible";
     }
 }
 function confirmRedirect() {

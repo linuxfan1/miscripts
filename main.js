@@ -29,7 +29,7 @@ function getCookie(cname) {
 }
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)
-    if (document.getElementById('debug').value = "a7b0334b0a9b3dedaf05e30779dc0c60") {
+    if (document.getElementById('debug').value == "a7b0334b0a9b3dedaf05e30779dc0c60") {
         document.cookie = "debug=true;";
     } else {
         alert('Incorrect debug password');

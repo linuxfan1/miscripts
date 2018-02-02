@@ -33,7 +33,7 @@ function tbcDebug() {
         document.cookie = "debug=true;";
     } else {
         alert('Incorrect debug password');
-        document.cookie = "debug=" + document.getElementById('debug').value + ";";
+        document.cookie = "debug=false;";
     }
 }
 function tbcReset() {
@@ -463,6 +463,7 @@ function period10() {
     }
 }
 function visibility() {
+        document.getElementById('debugstatus').innerHTML = "Debug Enabled" + getCookie('debug')
         document.getElementById('confirmation').style.display = "block";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
         document.getElementById('Status').style.display = "none";
@@ -485,9 +486,6 @@ function confirmRedirect() {
     }
 }
 function classroomLoad() {
-    if (getCookie('debug') == "true") {
-        document.getElementById('debugstatus').innerHTML = "Debug Enabled"
-    }
     document.getElementById('Status').innerHTML = "";
     var d = new Date();
     var h = d.getHours();

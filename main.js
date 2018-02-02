@@ -442,6 +442,7 @@ function period10() {
 function visibility() {
         document.getElementById('confirmation').style.display = "inline";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
+        document.getElementById('status').className = "";
         //document.getElementById('confirmationtext').innerHTML = redirectlocation;
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
         document.getElementById('confirmation').style.display = "inline";

@@ -441,16 +441,16 @@ function period10() {
     }
 }
 function visibility() {
-        document.getElementById('confirmation').style.display = "inline";
+        document.getElementById('confirmation').style.display = "block";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
         document.getElementById('Status').style.display = "none";
         //document.getElementById('confirmationtext').innerHTML = redirectlocation;
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
-        document.getElementById('confirmation').style.display = "inline";
+        document.getElementById('confirmation').style.display = "block";
         document.getElementById("confirmationbutton").style.display = "none";
         document.getElementById("confirmationtext").innerHTML = "No code was specified for this period.<s> If this is incorrect, rewrite it <a class='disabled' href='/TBC/cookiewriter'>here</a></s>.";
     } else {
-        document.getElementById('confirmation').style.display = "inline";
+        document.getElementById('confirmation').style.display = "block";
     }
 }
 function confirmRedirect() {

@@ -111,7 +111,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period1typecustom').checked == true) {
         document.cookie = "period1type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period1customurl=" + document.getElementById('period1customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period1type') == "") {
         document.cookie = "period1type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period2typemath').checked == true) {
@@ -123,7 +123,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period2typecustom').checked == true) {
         document.cookie = "period2type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period2customurl=" + document.getElementById('period2customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period2type') == "") {
         document.cookie = "period2type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period3typemath').checked == true) {
@@ -135,7 +135,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period3typecustom').checked == true) {
         document.cookie = "period3type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period3customurl=" + document.getElementById('period3customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period3type') == "") {
         document.cookie = "period3type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period4typemath').checked == true) {
@@ -147,7 +147,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period4typecustom').checked == true) {
         document.cookie = "period4type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period4customurl=" + document.getElementById('period4customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period4type') == "") {
         document.cookie = "period4type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period5typemath').checked == true) {
@@ -159,7 +159,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period5typecustom').checked == true) {
         document.cookie = "period5type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period5customurl=" + document.getElementById('period5customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period5type') == "") {
         document.cookie = "period5type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period6typemath').checked == true) {
@@ -171,7 +171,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period6typecustom').checked == true) {
         document.cookie = "period6type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period6customurl=" + document.getElementById('period6customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period6type') == "") {
         document.cookie = "period6type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period7typemath').checked == true) {
@@ -183,7 +183,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period7typecustom').checked == true) {
         document.cookie = "period7type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period7customurl=" + document.getElementById('period7customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period7type') == "") {
         document.cookie = "period7type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period8typemath').checked == true) {
@@ -195,7 +195,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period8typecustom').checked == true) {
         document.cookie = "period8type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period8customurl=" + document.getElementById('period8customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period8type') == "") {
         document.cookie = "period8type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period9typemath').checked == true) {
@@ -207,7 +207,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period9typecustom').checked == true) {
         document.cookie = "period9type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period9customurl=" + document.getElementById('period9customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period9type') == "") {
         document.cookie = "period9type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     if (document.getElementById('period10typescience').checked == true) {
@@ -219,7 +219,7 @@ function firstrunFunction2() {
     } else if (document.getElementById('period10typecustom').checked == true) {
         document.cookie = "period10type=custom; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
         document.cookie = "period10customurl=" + document.getElementById('period10customurl').value + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
-    } else {
+    } else if (getCookie('period10type') == "") {
         document.cookie = "period10type=other; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";
     }
     location.reload();

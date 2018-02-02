@@ -27,6 +27,19 @@ function getCookie(cname) {
     }
     return "";
 }
+function tbcReset() {
+    document.cookie = "firstrun=Reset"
+    document.cookie = "period1="
+    document.cookie = "period2="
+    document.cookie = "period3="
+    document.cookie = "period4="
+    document.cookie = "period5="
+    document.cookie = "period6="
+    document.cookie = "period7="
+    document.cookie = "period8="
+    document.cookie = "period9="
+    document.cookie = "period10="
+}
 function firstrunFunction() {
     document.getElementById('pd1').value = getCookie("period1");
     document.getElementById('pd2').value = getCookie("period2");

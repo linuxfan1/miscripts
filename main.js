@@ -516,11 +516,11 @@ function classroomLoad() {
         if (m <= 34) {
             return period10();
         } else {
-            alert("Classes are done for the day. Please try again tomorrow.");
-            document.getElementById('Status').innerHTML = "";
+            document.getElementById('Status').innerHTML = "No available class.";
+            document.getElementById('Status').className = "alert alert-danger";
         }
     } else {
-        alert("Classes are done for the day. Please try again tomorrow.");
-        document.getElementById('Status').innerHTML = "";
+        document.getElementById('Status').innerHTML = "No available class.";
+        document.getElementById('Status').className = "alert alert-danger";
     }
 }

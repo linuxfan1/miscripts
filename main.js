@@ -12,6 +12,9 @@ var pdurl7 = "https://classroom.google.com/u/0/c/" + getCookie('period7');
 var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
 var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
 var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
+if (getCookie('debug') == "true") {
+    document.getElementById('debugstatus').innerHTML = "Debug Enabled"
+}
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -250,23 +253,14 @@ function pageLoad() {
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "inline";
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
-        if (getCookie('debug') == true) {
-            document.getElementById('debugstatus').innerHTML = "Debug Enabled"
-        }
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
             document.getElementById('Status').style.display = "inline";
             document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
-            document.getElementById('Status').className = "alert alert-warning";            
-            if (getCookie('debug') == true) {
-                document.getElementById('debugstatus').innerHTML = "Debug Enabled"
-            }
+            document.getElementById('Status').className = "alert alert-warning";
             return firstrunFunction();
         } else {
-            if (getCookie('debug') == true) {
-                document.getElementById('debugstatus').innerHTML = "Debug Enabled"
-            }
             return classroomLoad();
         }
     }

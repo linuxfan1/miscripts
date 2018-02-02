@@ -13,36 +13,6 @@ var pdurl7 = "https://classroom.google.com/u/0/c/" + getCookie('period7');
 var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
 var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
 var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
-if (getCookie('period1')=="") {
-    document.getElementById('period1div').style.visibility = hidden;
-}
-if (getCookie('period2')=="") {
-    document.getElementById('period2div').style.visibility = hidden;
-}
-if (getCookie('period3')=="") {
-    document.getElementById('period3div').style.visibility = hidden;
-}
-if (getCookie('period4')=="") {
-    document.getElementById('period4div').style.visibility = hidden;
-}
-if (getCookie('period5')=="") {
-    document.getElementById('period5div').style.visibility = hidden;
-}
-if (getCookie('period6')=="") {
-    document.getElementById('period6div').style.visibility = hidden;
-}
-if (getCookie('period7')=="") {
-    document.getElementById('period7div').style.visibility = hidden;
-}
-if (getCookie('period8')=="") {
-    document.getElementById('period8div').style.visibility = hidden;
-}
-if (getCookie('period9')=="") {
-    document.getElementById('period9div').style.visibility = hidden;
-}
-if (getCookie('period10')=="") {
-    document.getElementById('period10div').style.visibility = hidden;
-}
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -70,6 +40,36 @@ function firstrunFunction() {
     document.getElementById('pd9').value = getCookie("period9");
     document.getElementById('pd10').value = getCookie("period10");
     document.getElementById('Pdls').className = "firstrun";
+    if (getCookie('period1') == "") {
+        document.getElementById('period1div').style.visibility = hidden;
+    }
+    if (getCookie('period2') == "") {
+        document.getElementById('period2div').style.visibility = hidden;
+    }
+    if (getCookie('period3') == "") {
+        document.getElementById('period3div').style.visibility = hidden;
+    }
+    if (getCookie('period4') == "") {
+        document.getElementById('period4div').style.visibility = hidden;
+    }
+    if (getCookie('period5') == "") {
+        document.getElementById('period5div').style.visibility = hidden;
+    }
+    if (getCookie('period6') == "") {
+        document.getElementById('period6div').style.visibility = hidden;
+    }
+    if (getCookie('period7') == "") {
+        document.getElementById('period7div').style.visibility = hidden;
+    }
+    if (getCookie('period8') == "") {
+        document.getElementById('period8div').style.visibility = hidden;
+    }
+    if (getCookie('period9') == "") {
+        document.getElementById('period9div').style.visibility = hidden;
+    }
+    if (getCookie('period10') == "") {
+        document.getElementById('period10div').style.visibility = hidden;
+    }
 }
 function firstrunFunction2() {
     document.cookie = "firstrun=" + currentversion + "; expires=Mon, 18 Jun 2018 12:00:00 GMT-0400 EDT;";

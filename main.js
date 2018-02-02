@@ -231,7 +231,7 @@ function pageLoad() {
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
-            document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC " + getCookie('firstrun') + " detected. The current version is " + currentversion + ", please recomplete the form.";
+            document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
             document.getElementById('Status').className = "alert alert-warning";
             return firstrunFunction();
         } else {

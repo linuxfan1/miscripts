@@ -464,7 +464,7 @@ function period10() {
     }
 }
 function visibility() {
-        document.getElementById('debugstatus').innerHTML = "Debug Enabled" + debugstats;
+        document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
         document.getElementById('confirmation').style.display = "block";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
         document.getElementById('Status').style.display = "none";

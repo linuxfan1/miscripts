@@ -27,6 +27,13 @@ function getCookie(cname) {
     }
     return "";
 }
+function tbcDebug() {
+    if (document.getElementById('debug').value = "a7b0334b0a9b3dedaf05e30779dc0c60") {
+        document.cookie = "debug=true;";
+    } else {
+        alert('Incorrect debug password');
+    }
+}
 function tbcReset() {
     document.cookie = "firstrun=Reset"
     document.cookie = "period1="

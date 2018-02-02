@@ -421,6 +421,7 @@ function period10() {
 function visibility() {
         document.getElementById('confirmation').style.visibility = "visible";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
+        document.getElementById('confirmationtext').innerHTML = redirectlocation;
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
         document.getElementById('confirmation').style.visibility = "visible";
         document.getElementById("confirmationbutton").style.visibility = "hidden";

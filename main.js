@@ -1,3 +1,4 @@
+
 var currentversion = "v3.6";
 var redirectlocation = "";
 var windowlocation = "";
@@ -226,12 +227,11 @@ function firstrunFunction2() {
 }
 function pageLoad() {
     if (getCookie('firstrun') == "") {
-        document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
+        document.getElementById('Status').innerHTML = "Please complete the first run setup below.";
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
-            document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
-            document.getElementById('Status').className = "alert alert-warning";
+            document.getElementById('Status').innerHTML = "TBC " + getCookie('firstrun') + " detected. The current version is " + currentversion + ", please recomplete the form.";
             return firstrunFunction();
         } else {
             return classroomLoad();

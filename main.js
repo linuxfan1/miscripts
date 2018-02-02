@@ -227,10 +227,12 @@ function firstrunFunction2() {
 }
 function pageLoad() {
     if (getCookie('firstrun') == "") {
+        document.getElementById('Status').style.display = "inline";
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
+            document.getElementById('Status').style.display = "inline";
             document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
             document.getElementById('Status').className = "alert alert-warning";
             return firstrunFunction();
@@ -442,7 +444,7 @@ function period10() {
 function visibility() {
         document.getElementById('confirmation').style.display = "inline";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
-        document.getElementById('status').className = "";
+        document.getElementById('Status').style.display = "none";
         //document.getElementById('confirmationtext').innerHTML = redirectlocation;
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
         document.getElementById('confirmation').style.display = "inline";
@@ -519,9 +521,11 @@ function classroomLoad() {
         } else {
             document.getElementById('Status').innerHTML = "No available class.";
             document.getElementById('Status').className = "alert alert-danger";
+            document.getElementById('Status').style.display = "inline";
         }
     } else {
         document.getElementById('Status').innerHTML = "No available class.";
         document.getElementById('Status').className = "alert alert-danger";
+        document.getElementById('Status').style.display = "inline";
     }
 }

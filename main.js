@@ -12,6 +12,7 @@ var pdurl7 = "https://classroom.google.com/u/0/c/" + getCookie('period7');
 var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
 var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
 var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
+var debugstats = getCookie('debug');
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -463,7 +464,7 @@ function period10() {
     }
 }
 function visibility() {
-        document.getElementById('debugstatus').innerHTML = "Debug Enabled" + getCookie('debug')
+        document.getElementById('debugstatus').innerHTML = "Debug Enabled" + debugstats;
         document.getElementById('confirmation').style.display = "block";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
         document.getElementById('Status').style.display = "none";

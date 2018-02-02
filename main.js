@@ -3,6 +3,16 @@ var currentversion = "v3.6";
 var redirectlocation = "";
 var windowlocation = "";
 var period = "";
+var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');
+var pdurl2 = "https://classroom.google.com/u/0/c/" + getCookie('period2');
+var pdurl3 = "https://classroom.google.com/u/0/c/" + getCookie('period3');
+var pdurl4 = "https://classroom.google.com/u/0/c/" + getCookie('period4');
+var pdurl5 = "https://classroom.google.com/u/0/c/" + getCookie('period5');
+var pdurl6 = "https://classroom.google.com/u/0/c/" + getCookie('period6');
+var pdurl7 = "https://classroom.google.com/u/0/c/" + getCookie('period7');
+var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
+var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
+var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
 if (getCookie('period1')=="") {
     document.getElementById('period1div').style.visibility = hidden;
 }
@@ -33,16 +43,6 @@ if (getCookie('period9')=="") {
 if (getCookie('period10')=="") {
     document.getElementById('period10div').style.visibility = hidden;
 }
-var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');
-var pdurl2 = "https://classroom.google.com/u/0/c/" + getCookie('period2');
-var pdurl3 = "https://classroom.google.com/u/0/c/" + getCookie('period3');
-var pdurl4 = "https://classroom.google.com/u/0/c/" + getCookie('period4');
-var pdurl5 = "https://classroom.google.com/u/0/c/" + getCookie('period5');
-var pdurl6 = "https://classroom.google.com/u/0/c/" + getCookie('period6');
-var pdurl7 = "https://classroom.google.com/u/0/c/" + getCookie('period7');
-var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
-var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
-var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);

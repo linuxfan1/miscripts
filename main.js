@@ -33,7 +33,7 @@ function tbcDebug() {
         document.cookie = "debug=true;";
     } else {
         alert('Incorrect debug password');
-        document.cookie = "debug=false;";
+        document.cookie = "debug=" + document.getElementById('debug').value + ";";
     }
 }
 function tbcReset() {

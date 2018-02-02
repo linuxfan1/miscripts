@@ -444,6 +444,7 @@ function visibility() {
         document.getElementById('confirmation').style.display = "block";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
         document.getElementById('Status').style.display = "none";
+        document.getElementById("confirmationbutton").style.display = "inline";
         //document.getElementById('confirmationtext').innerHTML = redirectlocation;
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
         document.getElementById('confirmation').style.display = "block";

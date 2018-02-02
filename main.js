@@ -40,34 +40,34 @@ function firstrunFunction() {
     document.getElementById('pd9').value = getCookie("period9");
     document.getElementById('pd10').value = getCookie("period10");
     document.getElementById('Pdls').className = "firstrun";
-    if (getCookie('period1') == "") {
+    if (document.getElementById('pd1').value == "") {
         document.getElementById('period1div').style.visibility = hidden;
     }
-    if (getCookie('period2') == "") {
+    if (document.getElementById('pd2').value != "") {
         document.getElementById('period2div').style.visibility = hidden;
     }
-    if (getCookie('period3') == "") {
+    if (document.getElementById('pd3').value != "") {
         document.getElementById('period3div').style.visibility = hidden;
     }
-    if (getCookie('period4') == "") {
+    if (document.getElementById('pd4').value != "") {
         document.getElementById('period4div').style.visibility = hidden;
     }
-    if (getCookie('period5') == "") {
+    if (document.getElementById('pd5').value != "") {
         document.getElementById('period5div').style.visibility = hidden;
     }
-    if (getCookie('period6') == "") {
+    if (document.getElementById('pd6').value != "") {
         document.getElementById('period6div').style.visibility = hidden;
     }
-    if (getCookie('period7') == "") {
+    if (document.getElementById('pd7').value != "") {
         document.getElementById('period7div').style.visibility = hidden;
     }
-    if (getCookie('period8') == "") {
+    if (document.getElementById('pd8').value != "") {
         document.getElementById('period8div').style.visibility = hidden;
     }
-    if (getCookie('period9') == "") {
+    if (document.getElementById('pd9').value != "") {
         document.getElementById('period9div').style.visibility = hidden;
     }
-    if (getCookie('period10') == "") {
+    if (document.getElementById('pd10').value != "") {
         document.getElementById('period10div').style.visibility = hidden;
     }
 }

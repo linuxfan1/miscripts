@@ -12,9 +12,6 @@ var pdurl7 = "https://classroom.google.com/u/0/c/" + getCookie('period7');
 var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
 var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
 var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
-if (getCookie('debug') == "true") {
-    document.getElementById('debugstatus').innerHTML = "Debug Enabled"
-}
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -29,6 +26,9 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+if (getCookie('debug') == "true") {
+    document.getElementById('debugstatus').innerHTML = "Debug Enabled"
 }
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)

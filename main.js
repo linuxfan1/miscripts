@@ -448,7 +448,7 @@ function visibility() {
     if (redirectlocation == "https://classroom.google.com/u/0/c/" || redirectlocation == "") {
         document.getElementById('confirmation').style.display = "block";
         document.getElementById("confirmationbutton").style.display = "none";
-        document.getElementById("confirmationtext").innerHTML = "No code was specified for this period.<s> If this is incorrect, rewrite it <a href="#">here</a></s>.";
+        document.getElementById("confirmationtext").innerHTML = "No code was specified for this period.<s> If this is incorrect, rewrite it <a href='#'>here</a></s>.";
     } else {
         document.getElementById('confirmation').style.display = "block";
     }

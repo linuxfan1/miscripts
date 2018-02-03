@@ -248,6 +248,7 @@ function firstrunFunction2() {
     location.reload();
 }
 function pageLoad() {
+    document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
@@ -464,7 +465,6 @@ function period10() {
     }
 }
 function visibility() {
-        document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
         document.getElementById('confirmation').style.display = "block";
         document.getElementById('confirmationtext').innerHTML =  "Press 'Ok' to continue to the " + period + " period classroom.";
         document.getElementById('Status').style.display = "none";

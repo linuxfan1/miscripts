@@ -35,6 +35,7 @@ function tbcDebug() {
     } else {
         alert('Incorrect debug password');
         document.cookie = "debug=false;";
+        document.cookie = "lastpassword=" + b64_md5(document.getElementById('debug').value)
     }
 }
 function tbcReset() {
@@ -249,7 +250,6 @@ function firstrunFunction2() {
     location.reload();
 }
 function pageLoad() {
-    document.cookie = "test=" + b64_md5('disable') + ";";
     document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";

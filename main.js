@@ -49,6 +49,7 @@ function tbcReset() {
     document.cookie = "period8="
     document.cookie = "period9="
     document.cookie = "period10="
+    location.reload();
 }
 function firstrunFunction() {
     document.getElementById('pd1').value = getCookie("period1");

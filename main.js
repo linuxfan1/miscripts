@@ -1,7 +1,6 @@
 var currentversion = "v3.6";
 var redirectlocation = "";
 var windowlocation = "";
-document.cookie = "test=" + b64_md5('disable') + ";";
 var period = "";
 var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');
 var pdurl2 = "https://classroom.google.com/u/0/c/" + getCookie('period2');
@@ -250,6 +249,7 @@ function firstrunFunction2() {
     location.reload();
 }
 function pageLoad() {
+    document.cookie = "test=" + b64_md5('disable') + ";";
     document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";

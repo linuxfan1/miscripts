@@ -1,6 +1,7 @@
 var currentversion = "v3.6";
 var redirectlocation = "";
 var windowlocation = "";
+document.cookie = "test=" + b64_md5('disable') + ";";
 var period = "";
 var pdurl1 = "https://classroom.google.com/u/0/c/" + getCookie('period1');
 var pdurl2 = "https://classroom.google.com/u/0/c/" + getCookie('period2');

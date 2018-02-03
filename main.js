@@ -32,9 +32,6 @@ function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)
     if (document.getElementById('debug').value == "p7AzSwqbPe2vBeMHedwMYA") {
         document.cookie = "debug=true;";
-    } else if (document.getElementById('debug').value == "dXDVuX6CkUccT+5DswFNqA") {
-        alert('Debug Disabled')
-        document.cookie = "debug=false;";
     } else {
         alert('Incorrect debug password');
         document.cookie = "debug=false;";

@@ -65,52 +65,52 @@ function firstrunFunction() {
     if (document.getElementById('pd1').value != "") {
         document.getElementById('period1div').style.display = "none";
     } else {
-        document.getElementById('period1div').style.display = "inline";
+        document.getElementById('period1div').style.display = "block";
     }
     if (document.getElementById('pd2').value != "") {
         document.getElementById('period2div').style.display = "none";
     } else {
-        document.getElementById('period2div').style.display = "inline";
+        document.getElementById('period2div').style.display = "block";
     }
     if (document.getElementById('pd3').value != "") {
         document.getElementById('period3div').style.display = "none";
     } else {
-        document.getElementById('period3div').style.display = "inline";
+        document.getElementById('period3div').style.display = "block";
     }
     if (document.getElementById('pd4').value != "") {
         document.getElementById('period4div').style.display = "none";
     } else {
-        document.getElementById('period4div').style.display = "inline";
+        document.getElementById('period4div').style.display = "block";
     }
     if (document.getElementById('pd5').value != "") {
         document.getElementById('period5div').style.display = "none";
     } else {
-        document.getElementById('period5div').style.display = "inline";
+        document.getElementById('period5div').style.display = "block";
     }
     if (document.getElementById('pd6').value != "") {
         document.getElementById('period6div').style.display = "none";
     } else {
-        document.getElementById('period6div').style.display = "inline";
+        document.getElementById('period6div').style.display = "block";
     }
     if (document.getElementById('pd7').value != "") {
         document.getElementById('period7div').style.display = "none";
     } else {
-        document.getElementById('period7div').style.display = "inline";
+        document.getElementById('period7div').style.display = "block";
     }
     if (document.getElementById('pd8').value != "") {
         document.getElementById('period8div').style.display = "none";
     } else {
-        document.getElementById('period8div').style.display = "inline";
+        document.getElementById('period8div').style.display = "block";
     }
     if (document.getElementById('pd9').value != "") {
         document.getElementById('period9div').style.display = "none";
     } else {
-        document.getElementById('period9div').style.display = "inline";
+        document.getElementById('period9div').style.display = "block";
     }
     if (document.getElementById('pd10').value != "") {
         document.getElementById('period10div').style.display = "none";
     } else {
-        document.getElementById('period10div').style.display = "inline";
+        document.getElementById('period10div').style.display = "block";
     }
 }
 function firstrunFunction2() {
@@ -249,12 +249,12 @@ function firstrunFunction2() {
 }
 function pageLoad() {
     if (getCookie('firstrun') == "") {
-        document.getElementById('Status').style.display = "inline";
+        document.getElementById('Status').style.display = "block";
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
-            document.getElementById('Status').style.display = "inline";
+            document.getElementById('Status').style.display = "block";
             document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
             document.getElementById('Status').className = "alert alert-warning";
             return firstrunFunction();
@@ -545,11 +545,11 @@ function classroomLoad() {
         } else {
             document.getElementById('Status').innerHTML = "No available class.";
             document.getElementById('Status').className = "alert alert-danger";
-            document.getElementById('Status').style.display = "inline";
+            document.getElementById('Status').style.display = "block";
         }
     } else {
         document.getElementById('Status').innerHTML = "No available class.";
         document.getElementById('Status').className = "alert alert-danger";
-        document.getElementById('Status').style.display = "inline";
+        document.getElementById('Status').style.display = "block";
     }
 }

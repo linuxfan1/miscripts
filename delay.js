@@ -53,7 +53,6 @@ function tbcReset() {
     window.location.assign('https://goo.gl/iMUzzr');
 }
 function pageLoad() {
-    document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
     if (getCookie('firstrun') === "") {
         document.getElementById('Status').style.display = "block";
         document.getElementById('Status').className = "alert alert-warning";

@@ -250,7 +250,6 @@ function firstrunFunction2() {
     location.reload();
 }
 function pageLoad() {
-    document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";

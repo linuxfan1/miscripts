@@ -28,9 +28,6 @@ function getCookie(cname) {
     }
     return "";
 }
-function debugFunctionEnable(); {
-    return false;
-}
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)
     if (document.getElementById('debug').value == "p7AzSwqbPe2vBeMHedwMYA") {
@@ -269,12 +266,7 @@ function pageLoad2() {
     }
 }
 function pageLoad() {
-    if (getCookie('debug') == "true") {
-        document.getElementById('debugbutton').style.display = "inline;";
-        return pageLoad2();
-    } else {
-        return pageLoad2();
-    }
+    return pageLoad2();
 }
 function period1() {
     period = "1st";

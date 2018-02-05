@@ -31,10 +31,10 @@ function getCookie(cname) {
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)
     if (document.getElementById('debug').value == "p7AzSwqbPe2vBeMHedwMYA") {
-        document.cookie = "debug=true;";
+        document.cookie = "debug=enabled;";
     } else {
         alert('Incorrect debug password');
-        document.cookie = "debug=false;";
+        document.cookie = "debug=disabled;";
         document.cookie = "lastpassword=" + b64_md5(document.getElementById('debug').value)
     }
 }
@@ -266,7 +266,12 @@ function pageLoad2() {
     }
 }
 function pageLoad() {
-    return pageLoad2();
+    if (getCookie('debug') == "enabled") {
+        document.getElementById('debugbutton').style.display = "inline";
+        return pageLoad2();
+    } else {
+        return pageLoad2();
+    }
 }
 function period1() {
     period = "1st";

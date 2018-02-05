@@ -28,6 +28,8 @@ function getCookie(cname) {
     }
     return "";
 }
+function debugFunctionEnable(); {
+}
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)
     if (document.getElementById('debug').value == "p7AzSwqbPe2vBeMHedwMYA") {
@@ -249,7 +251,7 @@ function firstrunFunction2() {
     }
     location.reload();
 }
-function pageLoad() {
+function pageLoad2() {
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
@@ -263,6 +265,14 @@ function pageLoad() {
         } else {
             return classroomLoad();
         }
+    }
+}
+function pageLoad() {
+    if (getCookie('debug') == "true") {
+        document.getElementById('debugbutton').style.display = "inline;";
+        return pageLoad2();
+    } else {
+        return pageLoad2();
     }
 }
 function period1() {

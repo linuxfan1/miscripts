@@ -29,6 +29,7 @@ function getCookie(cname) {
     return "";
 }
 function debugFunctionEnable(); {
+    return false;
 }
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value)

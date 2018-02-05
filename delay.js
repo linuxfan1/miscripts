@@ -56,7 +56,7 @@ function pageLoad() {
     document.getElementById('debugstatus').innerHTML = "Debug Enabled: " + debugstats;
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";
-        document.getElementById('Status').className = "alert alert-warning"'
+        document.getElementById('Status').className = "alert alert-warning";
         document.getElementById('Status').innerHTML = "<strong>Warning: </strong><a href='https://goo.gl/iMUzzr'>TBC</a> Setup has not been completed. Please complete it first before using TBC - Delay";
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
@@ -360,4 +360,3 @@ function classroomLoad() {
         return noSchool();
     }
 }
-

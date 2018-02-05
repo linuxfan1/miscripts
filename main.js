@@ -480,6 +480,12 @@ function visibility() {
         document.getElementById('confirmation').style.display = "block";
     }
 }
+function noSchool() {
+        document.getElementById('confirmation').style.display = "block";
+        document.getElementById('confirmationtext').innerHTML =  "Invalid time, please try again after school has begun.";
+        document.getElementById('Status').style.display = "none";
+        document.getElementById("confirmationbutton").style.display = "inline";
+}
 function confirmRedirect() {
     if (windowlocation != "") {
         window.open(windowlocation);
@@ -548,10 +554,12 @@ function classroomLoad() {
             document.getElementById('Status').innerHTML = "No available class.";
             document.getElementById('Status').className = "alert alert-danger";
             document.getElementById('Status').style.display = "block";
+            return noSchool();
         }
     } else {
         document.getElementById('Status').innerHTML = "No available class.";
         document.getElementById('Status').className = "alert alert-danger";
         document.getElementById('Status').style.display = "block";
+        return noSchool();
     }
 }

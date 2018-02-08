@@ -52,19 +52,28 @@ function tbcReset() {
     document.cookie = "period10=";
     window.location.assign('https://goo.gl/iMUzzr');
 }
-function pageLoad() {
-    if (getCookie('firstrun') === "") {
+function pageLoad2() {
+    if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";
-        document.getElementById('Status').className = "alert alert-warning";
-        document.getElementById('Status').innerHTML = "<strong>Warning: </strong><a href='https://goo.gl/iMUzzr'>TBC</a> Setup has not been completed. Please complete it first before using TBC - Delay";
-    } else if (getCookie('firstrun') !== "") {
+        document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
+        return firstrunFunction();
+    } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {
             document.getElementById('Status').style.display = "block";
-            document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>. Please recomplete the setup at <a href='https://goo.gl/iMUzzr'>TBC</a>";
+            document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
             document.getElementById('Status').className = "alert alert-warning";
+            return firstrunFunction();
         } else {
             return classroomLoad();
         }
+    }
+}
+function pageLoad() {
+    if (getCookie('debug') == "enabled") {
+        document.getElementById('debugbutton').style.display = "inline";
+        return pageLoad2();
+    } else {
+        return pageLoad2();
     }
 }
 function period1() {

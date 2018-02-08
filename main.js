@@ -291,9 +291,11 @@ function period1() {
             redirectlocation = getCookie('period1customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl1;
     }
 }
@@ -311,9 +313,11 @@ function period2() {
             redirectlocation = getCookie('period2customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl2;
     }
 }
@@ -331,9 +335,11 @@ function period3() {
             redirectlocation = getCookie('period3customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl3;
     }
 }
@@ -351,9 +357,11 @@ function period4() {
             redirectlocation = getCookie('period4customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl4;
     }
 }
@@ -371,9 +379,11 @@ function period5() {
             redirectlocation = getCookie('period5customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl5
     }
 }
@@ -391,9 +401,11 @@ function period6() {
             redirectlocation = getCookie('period6customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl6;
     }
 }
@@ -411,9 +423,11 @@ function period7() {
             redirectlocation = getCookie('period7customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl7;
     }
 }
@@ -431,9 +445,11 @@ function period8() {
             redirectlocation = getCookie('period8customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl8;
     }
 }
@@ -451,9 +467,11 @@ function period9() {
             redirectlocation = getCookie('period9customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl9;
     }
 }
@@ -471,9 +489,11 @@ function period10() {
             redirectlocation = getCookie('period10customurl');
             return visibility();
         } else {
+            windowlocation = "";
             return visibility();
         }
     } else {
+        windowlocation = "";
         redirectlocation = pdurl10;
     }
 }

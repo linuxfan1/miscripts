@@ -31,10 +31,10 @@ function getCookie(cname) {
 function tbcDebug() {
     document.getElementById('debug').value = b64_md5(document.getElementById('debug').value);
     if (document.getElementById('debug').value == "p7AzSwqbPe2vBeMHedwMYA") {
-        document.cookie = "debug=enabled;";
+        document.cookie = "debug=true;";
     } else {
         alert('Incorrect debug password');
-        document.cookie = "debug=disabled;";
+        document.cookie = "debug=false;";
         document.cookie = "lastpassword=" + b64_md5(document.getElementById('debug').value);
     }
 }
@@ -52,28 +52,19 @@ function tbcReset() {
     document.cookie = "period10=";
     window.location.assign('https://goo.gl/iMUzzr');
 }
-function pageLoad2() {
-    if (getCookie('firstrun') == "") {
+function pageLoad() {
+    if (getCookie('firstrun') === "") {
         document.getElementById('Status').style.display = "block";
-        document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
-        return firstrunFunction();
-    } else if (getCookie('firstrun') != "") {
+        document.getElementById('Status').className = "alert alert-warning";
+        document.getElementById('Status').innerHTML = "<strong>Warning: </strong><a href='https://goo.gl/iMUzzr'>TBC</a> Setup has not been completed. Please complete it first before using TBC - Delay";
+    } else if (getCookie('firstrun') !== "") {
         if (getCookie('firstrun') != currentversion) {
             document.getElementById('Status').style.display = "block";
-            document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
+            document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>. Please recomplete the setup at <a href='https://goo.gl/iMUzzr'>TBC</a>";
             document.getElementById('Status').className = "alert alert-warning";
-            return firstrunFunction();
         } else {
             return classroomLoad();
         }
-    }
-}
-function pageLoad() {
-    if (getCookie('debug') == "enabled") {
-        document.getElementById('debugbutton').style.display = "inline";
-        return pageLoad2();
-    } else {
-        return pageLoad2();
     }
 }
 function period1() {
@@ -308,7 +299,12 @@ function classroomLoad() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
-    if (h == 9) {
+    if (h <= 8) {
+        document.getElementById('Status').innerHTML = "No available class.";
+        document.getElementById('Status').className = "alert alert-danger";
+        document.getElementById('Status').style.display = "block";
+        return noSchool();
+    } else if (h == 9) {
         if (m >= 30) {
             return period1();
         } else if (m <= 50) {
@@ -316,7 +312,10 @@ function classroomLoad() {
         } else if (m >= 50) {
             return period2();
         } else {
-            alert("School hasn't Begun, please try after 9:30.");
+            document.getElementById('Status').innerHTML = "No available class.";
+            document.getElementById('Status').className = "alert alert-danger";
+            document.getElementById('Status').style.display = "block";
+            return noSchool();
         }
     } else if (h == 10) {
         if (m <= 14) {

@@ -291,11 +291,6 @@ function visibility() {
         document.getElementById('confirmation').style.display = "block";
     }
 }
-function noSchool() {
-        document.getElementById('confirmation').style.display = "block";
-        document.getElementById('confirmationtext').innerHTML =  "Invalid time, please try again after school has begun.";
-        document.getElementById("confirmationbutton").style.display = "inline";
-}
 function confirmRedirect() {
     if (windowlocation !== "") {
         window.open(windowlocation);
@@ -312,7 +307,7 @@ function classroomLoad() {
         document.getElementById('Status').innerHTML = "<strong>Danger: </strong> No available class.";
         document.getElementById('Status').className = "alert alert-danger";
         document.getElementById('Status').style.display = "block";
-        return noSchool();
+        return false;
     } else if (h == 9) {
         if (m >= 30) {
             return period1();
@@ -324,7 +319,7 @@ function classroomLoad() {
             document.getElementById('Status').innerHTML = "<strong>Danger: </strong> No available class.";
             document.getElementById('Status').className = "alert alert-danger";
             document.getElementById('Status').style.display = "block";
-            return noSchool();
+            return false;
         }
     } else if (h == 10) {
         if (m <= 14) {
@@ -335,8 +330,7 @@ function classroomLoad() {
             } else if (m >= 38) {
                 return period4();
             }
-        } 
-    } else if (h == 11) {
+        } false;  } else if (h == 11) {
         if (m <= 2) {
             return period4();
         } else if (m <= 36) {
@@ -367,12 +361,12 @@ function classroomLoad() {
             document.getElementById('Status').innerHTML = "<strong>Danger: </strong> No available class.";
             document.getElementById('Status').className = "alert alert-danger";
             document.getElementById('Status').style.display = "block";
-            return noSchool();
+            return false;
         }
     } else {
         document.getElementById('Status').innerHTML = "<strong>Danger: </strong> No available class.";
         document.getElementById('Status').className = "alert alert-danger";
         document.getElementById('Status').style.display = "block";
-        return noSchool();
+        return false;
     }
 }

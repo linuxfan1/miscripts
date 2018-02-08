@@ -506,9 +506,19 @@ function classroomLoad() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
-    if (h == "7") {
+    if (h <= "6") {
+        document.getElementById('Status').innerHTML = "No available class.";
+        document.getElementById('Status').className = "alert alert-danger";
+        document.getElementById('Status').style.display = "block";
+        return noSchool();
+    } else if (h == "7") {
         if (m >= 30) {
            return period1();
+        } else if (m <=30) {
+            document.getElementById('Status').innerHTML = "No available class.";
+            document.getElementById('Status').className = "alert alert-danger";
+            document.getElementById('Status').style.display = "block";
+            return noSchool();
         }
     } else if (h == 8) {
         if (m <= 13) {

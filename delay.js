@@ -56,6 +56,7 @@ function pageLoad2() {
     if (getCookie('firstrun') == "") {
         document.getElementById('Status').style.display = "block";
         document.getElementById('Status').innerHTML = "<strong>Warning: </strong><a href='https://goo.gl/iMUzzr'>TBC</a> Setup has not been completed. Please complete it first before using TBC - Delay";
+        document.getElementById('Status').className = "alert alert-warning";
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
         if (getCookie('firstrun') != currentversion) {

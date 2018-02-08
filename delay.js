@@ -299,7 +299,7 @@ function classroomLoad() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
-    if (h <= "8") {
+    if (h <= 8) {
         document.getElementById('Status').innerHTML = "No available class.";
         document.getElementById('Status').className = "alert alert-danger";
         document.getElementById('Status').style.display = "block";

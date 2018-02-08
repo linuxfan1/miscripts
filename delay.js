@@ -299,7 +299,12 @@ function classroomLoad() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
-    if (h == 9) {
+    if (h <= "8") {
+        document.getElementById('Status').innerHTML = "No available class.";
+        document.getElementById('Status').className = "alert alert-danger";
+        document.getElementById('Status').style.display = "block";
+        return noSchool();
+    } else if (h == 9) {
         if (m >= 30) {
             return period1();
         } else if (m <= 50) {
@@ -307,7 +312,10 @@ function classroomLoad() {
         } else if (m >= 50) {
             return period2();
         } else {
-            alert("School hasn't Begun, please try after 9:30.");
+            document.getElementById('Status').innerHTML = "No available class.";
+            document.getElementById('Status').className = "alert alert-danger";
+            document.getElementById('Status').style.display = "block";
+            return noSchool();
         }
     } else if (h == 10) {
         if (m <= 14) {

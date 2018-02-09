@@ -511,11 +511,6 @@ function visibility() {
         document.getElementById('confirmation').style.display = "block";
     }
 }
-function noSchool() {
-        document.getElementById('confirmation').style.display = "block";
-        document.getElementById('confirmationtext').innerHTML =  "Invalid time, please try again after school has begun.";
-        document.getElementById("confirmationbutton").style.display = "inline";
-}
 function confirmRedirect() {
     if (windowlocation != "") {
         window.open(windowlocation);
@@ -533,7 +528,7 @@ function classroomLoad() {
         document.getElementById('Status').innerHTML = "No available class.";
         document.getElementById('Status').className = "alert alert-danger";
         document.getElementById('Status').style.display = "block";
-        return noSchool();
+        return false;
     } else if (h == "7") {
         if (m >= 30) {
            return period1();
@@ -541,7 +536,7 @@ function classroomLoad() {
             document.getElementById('Status').innerHTML = "No available class.";
             document.getElementById('Status').className = "alert alert-danger";
             document.getElementById('Status').style.display = "block";
-            return noSchool();
+            return false;
         }
     } else if (h == 8) {
         if (m <= 13) {
@@ -594,12 +589,12 @@ function classroomLoad() {
             document.getElementById('Status').innerHTML = "No available class.";
             document.getElementById('Status').className = "alert alert-danger";
             document.getElementById('Status').style.display = "block";
-            return noSchool();
+            return false;
         }
     } else {
         document.getElementById('Status').innerHTML = "No available class.";
         document.getElementById('Status').className = "alert alert-danger";
         document.getElementById('Status').style.display = "block";
-        return noSchool();
+        return false;
     }
 }

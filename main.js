@@ -46,7 +46,10 @@ function tbcDebug() {
 }
 function debugFunctionEnable() {
     document.getElementById('debugStatistics').style.display = "block";
-    document.getElementById('debugStatistics').innerHTML = "<ul id='debuglist'><li>" + getCookie('period1') + "</li><li>" + getCookie('period2') + "</li><li>" + getCookie('period3') + "</li><li>" + getCookie('period4') + "</li><li>" + getCookie('period5') + "</li><li>" + getCookie('period6') + "</li><li>" + getCookie('period7') + "</li><li>" + getCookie('period8') + "</li><li>" + getCookie('period9') + "</li><li>" + getCookie('period10') + "</li><li>" + getCookie('period1type') + "</li><li>" + getCookie('period2type') + "</li><li>" + getCookie('period3type') + "</li><li>" + getCookie('period4type') + "</li><li>" + getCookie('period5type') + "</li><li>" + getCookie('period6type') + "</li><li>" + getCookie('period7type') + "</li><li>" + getCookie('period8type') + "</li><li>" + getCookie('period9type') + "</li><li>" + getCookie('period10type') + "</li></ul>";
+    document.getElementById('debugStatistics').innerHTML = "<button type='button' class='btn btn-danger' onclick='return debugReset();' >Reset</button><ul id='debuglist'><li>" + getCookie('period1') + "</li><li>" + getCookie('period2') + "</li><li>" + getCookie('period3') + "</li><li>" + getCookie('period4') + "</li><li>" + getCookie('period5') + "</li><li>" + getCookie('period6') + "</li><li>" + getCookie('period7') + "</li><li>" + getCookie('period8') + "</li><li>" + getCookie('period9') + "</li><li>" + getCookie('period10') + "</li><li>" + getCookie('period1type') + "</li><li>" + getCookie('period2type') + "</li><li>" + getCookie('period3type') + "</li><li>" + getCookie('period4type') + "</li><li>" + getCookie('period5type') + "</li><li>" + getCookie('period6type') + "</li><li>" + getCookie('period7type') + "</li><li>" + getCookie('period8type') + "</li><li>" + getCookie('period9type') + "</li><li>" + getCookie('period10type') + "</li></ul>";
+}
+function debugReset(); {
+    document.cookie = "debug=disabled;";
 }
 function tbcReset() {
     document.cookie = "firstrun=Reset"

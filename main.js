@@ -19,7 +19,6 @@ var d = new Date();
 var day = d.getDay();
 var h = d.getHours();
 var m = d.getMinutes();
-document.cookie = "lastversion=" + version;
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);

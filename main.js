@@ -265,7 +265,7 @@ function pageLoad2() {
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
-        document.cookie = "date=" + date;
+        document.cookie = "date=" + day;
         if (getCookie('firstrun') != currentversion) {
             document.getElementById('Status').style.display = "block";
             document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";

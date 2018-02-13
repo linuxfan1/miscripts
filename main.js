@@ -277,11 +277,15 @@ function pageLoad2() {
     }
 }
 function pageLoad() {
-    if (getCookie('debug') == "enabled") {
-        document.getElementById('debugbutton').style.display = "inline";
-        return pageLoad2();
+    if (day === "0" || day == "7") {
+        window.location.assign('http://google.com');
     } else {
-        return pageLoad2();
+        if (getCookie('debug') == "enabled") {
+            document.getElementById('debugbutton').style.display = "inline";
+            return pageLoad2();
+        } else {
+            return pageLoad2();
+        }
     }
 }
 function period1() {

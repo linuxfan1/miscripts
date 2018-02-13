@@ -1,4 +1,6 @@
 var currentversion = "v3.6";
+var minorversion = ".1";
+var version = currentversion + minorversion;
 var redirectlocation = "";
 var windowlocation = "";
 var period = "";
@@ -13,6 +15,11 @@ var pdurl8 = "https://classroom.google.com/u/0/c/" + getCookie('period8');
 var pdurl9 = "https://classroom.google.com/u/0/c/" + getCookie('period9');
 var pdurl10 = "https://classroom.google.com/u/0/c/" + getCookie('period10');
 var debugstats = getCookie('debug');
+var d = new Date();
+var day = d.getDay();
+var h = d.getHours();
+var m = d.getMinutes();
+document.cookie = "lastversion=" + version;
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -259,6 +266,7 @@ function pageLoad2() {
         document.getElementById('Status').innerHTML = "<strong>Info: </strong>Please complete the first run setup below.";
         return firstrunFunction();
     } else if (getCookie('firstrun') != "") {
+        document.cookie = "date=" + date;
         if (getCookie('firstrun') != currentversion) {
             document.getElementById('Status').style.display = "block";
             document.getElementById('Status').innerHTML = "<strong>Warning: </strong>TBC <strong>" + getCookie('firstrun') + "</strong> detected. The current version is <strong>" + currentversion + "</strong>, please recomplete the form.";
@@ -521,9 +529,6 @@ function confirmRedirect() {
 }
 function classroomLoad() {
     document.getElementById('Status').innerHTML = "";
-    var d = new Date();
-    var h = d.getHours();
-    var m = d.getMinutes();
     if (h <= "6") {
         document.getElementById('Status').innerHTML = "<strong>Danger: </strong>No available class.";
         document.getElementById('Status').className = "alert alert-danger";

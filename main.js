@@ -50,6 +50,7 @@ function debugFunctionEnable() {
 }
 function debugReset() {
     document.cookie = "debug=disabled;";
+    window.location.reload();
 }
 function tbcReset() {
     document.cookie = "firstrun=Reset"

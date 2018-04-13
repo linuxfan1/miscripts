@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <!--Start Head-->
+
+    <head>
+        <link rel="icon" href="https://sites.google.com/site/mediastoragenmet/home/Portal.png" type="image/png" size="160x160">
+        <Title>Portal v2</Title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://linuxfan1.github.io/miscripts/glyphicon.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51765657-3"></script>
+        <script>
+            function submitUrl() {
+                var start = document.getElementById('urlBar').value.substring(0, 7);
+                if (start == "http://") {
+                    document.getElementById('iFrame').src = document.getElementById('urlBar').value;
+                    return false;
+                } else {
+                    document.getElementById('iFrame').src = "http://" + document.getElementById('urlBar').value;
+                    return false;
+                }
+            }
+
+            function iframeUrlBar() {
+                var iframeUrl = document.getElementById('iFrame').src;
+                if ("http://www.editey.com/preview/0B3jvdkkXIAFJQVlKMEYxeGU2S1U/HTML.html?pe=nmetzger.2021@myiasd.cc" == iframeUrl) {
+                    document.getElementById('urlBar').value = "";
+                    return false;
+                } else {
+                    document.getElementById('urlBar').value = document.getElementById('iFrame').src;
+                    return false;
+                }
+            }
+
+            function proxySearch() {
+                if (document.getElementById('urlBar').value == "") {
+                    document.getElementById('urlBar').placeholder = "Please enter a URL:"
+                } else {
+                    document.getElementById('urlBar').placeholder = "Url"
+                    document.getElementById('iFrame').src = "http://xite.ws/browse.php?u=" + document.getElementById('urlBar').value;
+                    return false;
+                }
+            }
+            function navbarHide() {
+                if (document.getElementById("divbar").style.display == "none") {
+                    document.getElementById("hideButton").innerHTML = "Hide"
+                    document.getElementById("divbar").style.display = "block";
+                    document.getElementById('iFrame').style.height = "85%";
+                } else {
+                    document.getElementById("hideButton").innerHTML = "Show"
+                    document.getElementById("divbar").style.display = "none";
+                    document.getElementById('iFrame').style.height = "95%";
+                }
+            }
+            function submitSite() {
+                var sitebardirect = document.getElementById('site').value;
+                if ("Cards" == sitebardirect) {
+                    document.getElementById('iFrame').src = "http://pretendyoure.xyz";
+                    return false;
+                } else if ("Bing" == sitebardirect || "bing" == sitebardirect) {
+                    document.getElementById('iFrame').src = "http://bing.com";
+                    return false;
+                } else if ("Pixlr" == sitebardirect || "pixlr" == sitebardirect) {
+                    document.getElementById('iFrame').src = "http://pixlr.com/editor";
+                    return false;
+                } else if ("Exit" == sitebardirect || "exit" == sitebardirect) {
+                    window.close();
+                    return false;
+                } else if ("pornhub" == sitebardirect || "Pornhub" == sitebardirect) {
+                    document.getElementById('urlBar').value = "ಠ_ಠ";
+                    document.getElementById('site').value = "Really dude? Ew.";
+                    return false;
+                } else if ("AdultSwim" == sitebardirect || "adultswim" == sitebardirect) {
+                    document.getElementById('iFrame').src = "http://adultswim.com";
+                    return false;
+                } else {
+                    document.getElementById('iFrame').src = "http://bing.com/?q=" + sitebardirect;
+                    return false;
+                }
+            }
+        </script>
+        <!-- CSS -->
+        <style>
+            body {
+                background-image: url(https://github.com/linuxfan1/miscripts/blob/master/Phone.png?raw=true);
+                overflow: hidden;
+            }
+            html, body {
+                width:100%;
+                height:100%;
+            }
+            topbar {
+                background-color: #0069c0;
+                height: 10px;
+                cursor: pointer;
+            }
+            hiddenButton {
+                visibility: hidden();
+            }
+            input.urlBox {
+                width: 50%;
+                background-color: #629af5;
+                border: none;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 10px;
+                color: Gainsboro;
+                font-size: 15px;
+                outline: none;
+                border-radius: 4px;
+            }
+            input.urlBox:focus {
+                background-color: #ffffff;
+                color: gray;
+                border: 1px solid #e8e8e8;
+                box-shadow: 2px 2px 10px black;
+            }
+            input.sitebar {
+                padding-left: 10px;
+                width: 50%;
+                background-color: #629af5;
+                border: none;
+                color: Gainsboro;
+                font-size: 10px;
+                outline: none;
+                border-radius: 4px;
+            }
+            input.sitebar:focus {
+                background-color: #ffffff;
+                color: gray;
+                border: 1px solid #e8e8e8;
+                box-shadow: 2px 2px 10px black
+            }
+            .submitButton {
+                height: 20px;
+                width: 20px;
+                background-color: #629af5;
+                border: none;
+                color: Gainsboro;
+                font-size: 15px;
+                outline: none;
+                border-radius: 4px;
+            }
+            .docsbar {
+                background-color: rgb(21, 101, 192);
+                height: 15%;
+                box-shadow: 1px 1px 10px black;
+            }
+            .navbar-brand {
+                color: white;
+            }
+            .frm2 {
+                display:block;
+                width:100%;
+                height:34px;
+                padding:6px 12px;
+                font-size:14px;
+                line-height:1.42857143;
+                color: white;
+                background-color: rgb(21, 101, 192);
+                background-image:none;
+                border: none;
+                border-radius:4px;
+                box-shadow: 1px 1px 10px black;
+            }
+            .frm {
+                display:block;
+                width:100%;
+                height:34px;
+                padding:6px 12px;
+                font-size:14px;
+                line-height:1.42857143;
+                color: white;
+                background-color: #FF8F00;
+                background-image:none;
+                border: none;
+                border-radius:4px;
+                box-shadow: 1px 1px 10px black;
+            }
+            ::-webkit-input-placeholder {
+                color: white;
+            }
+            .frm:focus {
+                background-color: #ffc046;
+                cursor: text;
+            }
+            .frm:hover {
+                background-color: #ffc046;
+                cursor: pointer;
+            }
+            ::placeholder {
+                color:white;
+            }
+            .navbar-toggle2 {
+                background-color: #d81b60;
+                box-shadow: 1px 1px 10px black;
+            }
+            .navbar-toggle2:focus, .navbar-toggle2:hover {
+                background-color: #a00037;
+            }
+            .active-material {
+                background-color: #d81b60;
+                box-shadow: 1px 1px 10px black;
+                color: white;
+            }
+            .active-material:hover {
+                background-color: #ff5c8d;
+                box-shadow: 1px 1px 10px black;
+                color: white;
+            }
+            .active-material:focus {
+                background-color: #ff5c8d;
+                box-shadow: 1px 1px 10px black;
+                color: white;
+            }
+            .dropdown-menu:hover {
+                background-color: #ff5c8d;
+                box-shadow: 1px 1px 10px black;
+                color: white;
+            }
+            .dropdown-menu:focus {
+                background-color: #ff5c8d;
+                box-shadow: 1px 1px 10px black;
+                color: white;
+            }
+            .loadingIcon {
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                animation: spin 2s linear infinite;
+            }
+            .iFrame {
+                width:100%;
+                height:85%;
+            }
+            .nvis {
+                border:none;
+                background-color: transparent;
+                height: 10px;
+                width: 10px;
+            }
+        </style>
+        <!-- End CSS -->
+    </head>
+    <!-- End Head-->
+
+    <body>
+        <!--Navbar-->
+        <button class="btn frm2" onclick="return navbarHide();" id="hideButton">Hide</button>
+        <div id="divbar">
+        <nav class="navbar navbar-inverse docsbar sticky-top">
+            <div class="nav-brand">
+                <img src="https://sites.google.com/site/mediastoragenmet/home/banner.png" style="height:50px;">
+            </div>
+            <div class="nav-item">
+            <form class="form-inline" method="post" onsubmit="return submitUrl();">
+                <div class="input-group">
+                    <input id="urlBar" class="form-control frm" placeholder="Url" autocomplete="off">
+                    <div class="input-group-append">
+                        <button class="input-group-text frm form-control"><span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <form method="post" onsubmit="return submitSite();" class="form-inline">
+                <div class="input-group">
+                    <input id="site" list="siteList" class="form-control frm" placeholder="Search" autocomplete="off">
+                    <div class="input-group-append">
+                        <button class="input-group-text frm form-control">
+                             <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </nav>
+        </div>
+        <!--End Navbar-->
+        <!--iFrame-->
+        <iframe id="iFrame" name="iFrame" src="" frameBorder="0" onload="iframeUrlBar();" class="iFrame"></iframe>
+        <!--End iFrame-->
+    </body>
+
+</html>

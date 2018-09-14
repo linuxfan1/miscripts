@@ -542,10 +542,10 @@ function classroomLoad() {
         document.getElementById('Status').style.display = "block";
         return false;
     } else if (h == "7") {
-        if (m >= 20) {
+        if (m >= 30) {
            return period1();
-        } else if (m <=20) {
-            document.getElementById('Status').innerHTML = "<strong>Danger: </strong>No available class.";
+        } else if (m <=30) {
+            document.getElementById('Status').innerHTML = "No available class.";
             document.getElementById('Status').className = "alert alert-danger";
             document.getElementById('Status').style.display = "block";
             return false;
@@ -598,13 +598,13 @@ function classroomLoad() {
         if (m <= 34) {
             return period10();
         } else {
-            document.getElementById('Status').innerHTML = "<strong>Danger: </strong>No available class.";
+            document.getElementById('Status').innerHTML = "No available class.";
             document.getElementById('Status').className = "alert alert-danger";
             document.getElementById('Status').style.display = "block";
             return false;
         }
     } else {
-        document.getElementById('Status').innerHTML = "<strong>Danger: </strong>No available class.";
+        document.getElementById('Status').innerHTML = "No available class.";
         document.getElementById('Status').className = "alert alert-danger";
         document.getElementById('Status').style.display = "block";
         return false;

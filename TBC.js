@@ -26,16 +26,16 @@ function getCookie(cname) {
 }
 function submitCookies() {
 	document.cookie = "firstrun_complete=Yes"
-    document.cookie = "period1=" + document.getElementById('pd1code').value
-    document.cookie = "period2=" + document.getElementById('pd2code').value
-    document.cookie = "period3=" + document.getElementById('pd3code').value
-    document.cookie = "period4=" + document.getElementById('pd4code').value
-    document.cookie = "period5=" + document.getElementById('pd5code').value
-    document.cookie = "period6=" + document.getElementById('pd6code').value
-    document.cookie = "period7=" + document.getElementById('pd7code').value
-    document.cookie = "period8=" + document.getElementById('pd8code').value
-    document.cookie = "period9=" + document.getElementById('pd9code').value
-    document.cookie = "period10=" + document.getElementById('pd10code').value
+	document.cookie = "period1=" + document.getElementById('pd1code').value
+	document.cookie = "period2=" + document.getElementById('pd2code').value
+	document.cookie = "period3=" + document.getElementById('pd3code').value
+	document.cookie = "period4=" + document.getElementById('pd4code').value
+	document.cookie = "period5=" + document.getElementById('pd5code').value
+	document.cookie = "period6=" + document.getElementById('pd6code').value
+	document.cookie = "period7=" + document.getElementById('pd7code').value
+	document.cookie = "period8=" + document.getElementById('pd8code').value
+	document.cookie = "period9=" + document.getElementById('pd9code').value
+	document.cookie = "period10=" + document.getElementById('pd10code').value
 	location.reload();
 }
 function firstrunFail() {
@@ -55,7 +55,7 @@ function pageLoad() {
 		document.getElementById('Cards').innerHTML = "<div class='card'><div class='card-body'><h4 class='card-title'>Go to Classroom</h4><input type='button' value ='Go!' onclick='return classroomNavigate();' class='btn btn-block btn-primary'></div></div>"
 		classroomLoad();
 	} else {
-		return false;
+		return firstrunFail();
 	}
 }
 function period1() {

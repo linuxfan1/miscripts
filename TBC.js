@@ -53,7 +53,7 @@ function firstrunFail() {
 function pageLoad() {
 	if (getCookie('firstrun_complete') == "Yes") {
 		document.getElementById('Cards').innerHTML = "<div class='card'><div class='card-body'><h4 class='card-title'>Go to Classroom</h4><input type='button' value ='Go!' onclick='return classroomNavigate();' class='btn btn-block btn-primary'></div></div>"
-		classroomLoad();
+		return classroomLoad();
 	} else {
 		return firstrunFail();
 	}

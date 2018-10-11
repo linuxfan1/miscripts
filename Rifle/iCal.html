@@ -4,7 +4,7 @@
         <!--Bootstrap-->
         <!-- Latest compiled and minified CSS -->
 		<link rel="icon" href="https://www.iasd.cc/pics/header_logo.png">
-		<title>Coaches - IHS Rifle</title>
+		<title>iCal - IHS Rifle</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script><!-- Latest compiled JavaScript -->
@@ -13,52 +13,50 @@
         <style>
             div.jumbotron {
                 margin:10px;
+				background:rgba(255, 255, 255, .7);
             }
 			body {
 				background:url("https://i.pinimg.com/736x/f6/16/e1/f616e1eb731e52671858197369a443f7--oak-texture-guangzhou.jpg");
 			}
         </style>
+		<script>
+			function navigate(url) {
+				location.assign(url)
+			}
+		</script>
     </head>
     <body>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <a class="navbar-brand" href="/index.html">IHS Rifle Team</a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="/index.html">Home</a>
+                    <a class="nav-link" href="/index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Bakesale.html">Bake Sale <span class="badge badge-secondary">Non-Functional</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/Coaches.html">Coaches</a>
+                    <a class="nav-link" href="/Coaches.html">Coaches</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/matches.html">Match Results</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/iCal.html">Calendar</a>
+                    <a class="nav-link active" href="/iCal.html">Calendar</a>
                 </li>
             </ul>
-        </nav>
-        <div class="jumbotron">
-			<div class="card-deck" style="width:50%">
-				<div class="card" style="width:400px">
-					<img class="card-img-top" src="https://linuxfan1.github.io/miscripts/Rifle/Placeholder.png" alt="Card image">
-					<div class="card-body">
-						<h4 class="card-title">John Hartman</h4>
-						<p class="card-text">Coach of the IHS Rifle Team</p>
-						<a href="/Hartman.html" class="btn btn-primary">See Profile</a>
-					</div>
-				</div>
-				<div class="card" style="width:400px">
-					<img class="card-img-top" src="https://linuxfan1.github.io/miscripts/Rifle/Placeholder.png" alt="Card image">
-					<div class="card-body">
-						<h4 class="card-title">Shantel</h4>
-						<p class="card-text">Assistant Coach of the IHS Rifle Team</p>
-						<a href="/Shantel.html" class="btn btn-primary">See Profile</a>
-					</div>
+        </nav>		
+		<div class="jumbotron">
+		<h1>IHS Rifle iCal</h1>
+			<div class="dropdown">
+				<button type="button" class="btn btn-success dropdown" data-toggle="dropdown">Subscribe to IHS iCal</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="https://calendar.google.com/calendar/b/0?cid=aWFzZC5jY19vNzgwdjhuaDEyNjAzcDZ2aWNsbHFpcGVib0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Google Calendar</a>
+					<a class="dropdown-item" href="https://calendar.google.com/calendar/ical/iasd.cc_o780v8nh12603p6vicllqipebo%40group.calendar.google.com/public/basic.ics">Download iCal file</a>
 				</div>
 			</div>
-        </div>
+		<br>
+<iframe src="https://calendar.google.com/calendar/b/1/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=iasd.cc_o780v8nh12603p6vicllqipebo%40group.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+		</div>
     </body>
 </html>

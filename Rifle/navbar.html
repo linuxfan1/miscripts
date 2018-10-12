@@ -1,22 +1,35 @@
 <!DOCTYPE HTML>
 <html>
-	<body>
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-			<a class="navbar-brand" href="/index.html">IHS Rifle Team</a>
-			<ul class="navbar-nav">
-				<!--<li class="nav-item">
+
+    <body>
+        <script>
+            function daysUntil(year, month, day) {
+                var now = new Date(),
+                    dateEnd = new Date(2018, 12 - 1, 6),
+                    days = (dateEnd - now) / 1000 / 60 / 60 / 24;
+                document.getElementById('demo').innerHTML = Math.round(days);
+            }
+        </script>
+		<script>
+			document.getElementById('daysuntilbadge').innerHTMl="Next Match - December 6th - " + daysUntil(2018, 12, 6) + " days until"
+		</script>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            	<a class="navbar-brand" href="/index.html">IHS Rifle Team</a>
+            <ul class="navbar-nav">
+                <!--<li class="nav-item">
 					<a id="bakesale" class="nav-link" href="/Bakesale.html">Bake Sale <span class="badge badge-secondary">Non-Functional</span></a>
 				</li>-->
-				<li class="nav-item">
-					<a id="coaches" class="nav-link" href="/Coaches.html">Coaches</a>
-				</li>
-				<li class="nav-item">
-					<a id="matchresults" class="nav-link" href="/matches.html">Match Results <span class="badge badge-success">Next Match - December 6th</span></a>
-				</li>
-				<li class="nav-item">
-					<a id="calendar" class="nav-link" href="/iCal.html">Calendar <span class="badge badge-primary">iCal Support</span></a>
-				</li>
-			</ul>
-		</nav>
-	</body>
+                <li class="nav-item">
+                    	<a id="coaches" class="nav-link" href="/Coaches.html">Coaches</a>
+                </li>
+                <li class="nav-item">
+                    	<a id="matchresults" class="nav-link" href="/matches.html">Match Results <span id="daysuntilbadge" class="badge badge-success"></span></a>
+                </li>
+                <li class="nav-item">
+                    	<a id="calendar" class="nav-link" href="/iCal.html">Calendar <span class="badge badge-primary">iCal Support</span></a>
+                </li>
+            </ul>
+        </nav>
+    </body>
+
 </html>

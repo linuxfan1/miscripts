@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <html>
+
     <head>
+		<meta name="theme-color" content="#343a40">
+		<meta name="msapplication-navbutton-color" content="#343a40">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#343a40">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Bootstrap-->
         <!-- Latest compiled and minified CSS -->
 		<link rel="icon" href="https://www.iasd.cc/pics/header_logo.png">
@@ -19,76 +24,71 @@
 				background:url("https://i.pinimg.com/736x/f6/16/e1/f616e1eb731e52671858197369a443f7--oak-texture-guangzhou.jpg");
 			}
         </style>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <a class="navbar-brand" href="/index.html">IHS Rifle Team</a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link " href="/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/Bakesale.html">Bake Sale <span class="badge badge-secondary">Non-Functional</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="/Coaches.html">Coaches</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/matches.html">Match Results</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/iCal.html">Calendar</a>
-                </li>
-            </ul>
-        </nav>
+		<script src="/Shared.js"></script>
+		<script>
+			function loadDoc() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("navbar").innerHTML =
+							this.responseText;
+						document.getElementById('daysuntilbadge').innerHTML = "Next Match - Home - December 6th - " + daysUntil(2018, 12, 6) + " days until"
+					}
+				};
+				xhttp.open("GET", "/navbar.html", true);
+				xhttp.send();
+				mobileCheck();
+			}
+		</script>
+	</head>
+
+	<body onload="return loadDoc();">
+        <div id="navbar">
+		</div>
         <div class="jumbotron">
             
-            <div id="pic" class="carousel slide"  data-ride="carousel" data-interval="7000" style="width:50%; margin:auto; margin-top:10px;">
-            
-              <!-- Indicators -->
-              <ul class="carousel-indicators">
-                <li data-target="#pic" data-slide-to="0" class="active"></li>
-                <li data-target="#pic" data-slide-to="1"></li>
-                <li data-target="#pic" data-slide-to="2"></li>
-              </ul>
-            
-              <!-- The slideshow -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://linuxfan1.github.io/miscripts/Rifle/Coat.jpg" style="width:100%;" alt="Ready Room">
-				  <div class="carousel-caption">
-					<h3>Hartman 1 (Placeholder)</h3>
-					<p>This is not hartman</p>
-				  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="https://linuxfan1.github.io/miscripts/Rifle/Hartman.jpg" style="width:100%;" alt="Hartman, The team leader.">
-				  <div class="carousel-caption">
-					<h3>Hartman 2 (Placeholder)</h3>
-					<p>This IS Hartman!</p>
-				  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="https://linuxfan1.github.io/miscripts/Rifle/Line.jpg" style="width:100%;" alt="Down the line.">
-				  <div class="carousel-caption">
-					<h3>Hartman 3 (Placeholder)</h3>
-					<p>Okay this is again not hartman</p>
-				  </div>
-                </div>
-              </div>
-            
-              <!-- Left and right controls -->
-              <a class="carousel-control-prev" href="#pic" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </a>
-              <a class="carousel-control-next" href="#pic" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </a>
-            
-            </div>
+            <div id="pic" class="carousel slide" data-ride="carousel" data-interval="7000" style="width:100%">
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+					<li data-target="#pic" data-slide-to="0" class="active"></li>
+					<li data-target="#pic" data-slide-to="1"></li>
+					<li data-target="#pic" data-slide-to="2"></li>
+				</ul>
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="/Pictures/Coat.jpg" style="width:100%;" alt="Ready Room">
+						<div class="carousel-caption">
+							<h3 class="mobile-changeSize">IHS Rifle Ready Room (Placeholder)</h3>
+							<p class="mobile-changeSize">Location of coats, mats, earplugs, and the guns.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="/Pictures/Hartman.jpg" style="width:100%;" alt="Hartman, The team leader.">
+						<div class="carousel-caption">
+							<h3 class="mobile-changeSize">Hartman (Placeholder)</h3>
+							<p class="mobile-changeSize">Hartman scoring targets.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="/Pictures/Line.jpg" style="width:100%;" alt="Down the line.">
+						<div class="carousel-caption">
+							<h3 class="mobile-changeSize">The Line (Placeholder)</h3>
+							<p class="mobile-changeSize">The line that the students fire down.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Left and right controls -->
+				<a class="carousel-control-prev" href="#pic" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#pic" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
         </div>
 		<div class="jumbotron">
-			<h1>Biography</h1>
+			<h1>Mr. Hartman</h1>
 			<p>Hartman is person. Will type more (placeholder)</p>
 		</div>
     </body>

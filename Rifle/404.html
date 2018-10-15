@@ -39,7 +39,16 @@
 				};
 				xhttp.open("GET", "/navbar.html", false);
 				xhttp.send();
-				mobileCheck();
+				setInterval(countdown, 1000);
+				setTimeout(redirect, 5000);
+			}
+			function redirect() {
+				window.history.back()
+			}
+			var time = 4
+			function countdown() {
+				document.getElementById('countdown').innerHTML = "Returning in " + time + " seconds...";
+				time -= 1;
 			}
 		</script>
 	</head>
@@ -48,6 +57,10 @@
         <div id="navbar">
         </div>
         <div class="jumbotron">
+		<img src="/Pictures/404.png" width="400px">
+		<h1>404 - Page Not Found</h1>
+		<h6 id="countdown">Returning in 5 seconds...</h6>
+		<button type="button" class="btn btn-primary" onclick="return redirect();">Go Now</button>
         </div>
     </body>
 

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>Time Based Classroom (2nd Edition)</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="/TBC.js"></script>
+        <style>
+            body {
+                background-image: url(https://github.com/linuxfan1/miscripts/blob/master/Phone.png?raw=true);
+            }
+        </style>
+    </head>
+
+    <body onload="return pageLoad();">
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+             <a class="navbar-brand" href="">Time Based Classroom (2nd Edition)</a>
+			 <span class="navbar-text" id="time"></span>
+        </nav>
+        <div class="container" id="Cards" style="padding-top:10px;">
+            <div class="card">
+                <div class="card-body">
+                    	<h2 class="card-title">TBC 2</h2>
+                    <p class="card-text">
+                        <br><abbr title="Time Based Classrom (2nd Edition)">TBC 2</abbr> is a useful application for having one bookmark for all of your Google Classrooms.
+                        <br>To setup, please copy the class code for each classroom, <i>https://classroom.google.com/u/0/c/</i><mark>***************</mark>(the star portion) into the correct period area. If you don't have a classroom for a certain period, leave the text area blank.
+                        <br>
+                </div>
+            </div>
+            <br>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 1</h5>
+                        <p class="card-text">
+                            <input id="pd1code" class="form-control" type="text" placeholder="Period 1 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 2</h5>
+                        <p class="card-text">
+                            <input id="pd2code" class="form-control" type="text" placeholder="Period 2 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 3</h5>
+                        <p class="card-text">
+                            <input id="pd3code" class="form-control" type="text" placeholder="Period 3 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 4</h5>
+                        <p class="card-text">
+                            <input id="pd4code" class="form-control" type="text" placeholder="Period 4 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 5</h5>
+                        <p class="card-text">
+                            <input id="pd5code" class="form-control" type="text" placeholder="Period 5 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 6</h5>
+                        <p class="card-text">
+                            <input id="pd6code" class="form-control" type="text" placeholder="Period 6 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 7</h5>
+                        <p class="card-text">
+                            <input id="pd7code" class="form-control" type="text" placeholder="Period 7 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 8</h5>
+                        <p class="card-text">
+                            <input id="pd8code" class="form-control" type="text" placeholder="Period 8 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 9</h5>
+                        <p class="card-text">
+                            <input id="pd9code" class="form-control" type="text" placeholder="Period 9 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Period 10</h5>
+                        <p class="card-text">
+                            <input id="pd10code" class="form-control" type="text" placeholder="Period 10 Classroom Code">
+                        </p>
+                    </div>
+                </div>
+            </div>
+			<div class="card">
+				<div class="card-body">
+					 <h5 class="card-title">User ID</h5>
+					<p class="card-text">
+						<input id="uid" class="form-control" type="text" placeholder="Default = 0">
+					</p>
+				</div>
+			</div>
+			<br>
+            <div class="card">
+                <div class="card-body">
+                    <input type="button" value="Submit" onclick="return submitCookies();" class="btn btn-block btn-primary">
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<script>
+			function isMobileDevice() {
+				return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+			};
+			function update() {
+				document.getElementById('device').innerHTML = isMobileDevice();
+			}
+		</script>
+	</head>
+	<body onload="return update();">
+		<p id="device"><input type="button" onclick="return update();"></p>
+	</body>
+	
+</html>

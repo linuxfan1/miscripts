@@ -2,6 +2,10 @@
 <html>
 
 	<head>
+		<meta name="theme-color" content="#343a40">
+		<meta name="msapplication-navbutton-color" content="#343a40">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#343a40">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--Bootstrap-->
 		<!-- Latest compiled and minified CSS -->
 		<link rel="icon" href="https://www.iasd.cc/pics/header_logo.png">
@@ -11,6 +15,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="/Shared.js"></script>
 		<!--End Bootstrap-->
 		<style>
 			div.jumbotron {
@@ -19,8 +24,11 @@
 			}
 			body {
 				background:url("https://i.pinimg.com/736x/f6/16/e1/f616e1eb731e52671858197369a443f7--oak-texture-guangzhou.jpg");
+				background-attachment: fixed;
 			}
 		</style>
+        <script>
+        </script>
 		<script>
 			function loadDoc() {
 				var xhttp = new XMLHttpRequest();
@@ -28,50 +36,243 @@
 					if (this.readyState == 4 && this.status == 200) {
 						document.getElementById("navbar").innerHTML =
 							this.responseText;
+						document.getElementById('daysuntilbadge').innerHTML = "Next Match - Home - December 6th - " + daysUntil(2018, 12, 6) + " days until";
 						document.getElementById('matchresults').classList.add('active');
+						document.getElementById('Wash').innerHTML = daysUntil(2018, 12, 6) + " days";
+						document.getElementById('Trinity').innerHTML = daysUntil(2018, 12, 11) + " days";
+						document.getElementById('WNC').innerHTML = daysUntil(2018, 12, 18) + " days";
+						document.getElementById('USC').innerHTML = daysUntil(2018, 12, 20) + " days";
+						document.getElementById('Plum').innerHTML = daysUntil(2019, 1, 3) + " days";
+						document.getElementById('Butler').innerHTML = daysUntil(2019, 1, 8) + " days";
+						document.getElementById('Hempfield').innerHTML = daysUntil(2019, 1, 10) + " days";
+						document.getElementById('Armstrong').innerHTML = daysUntil(2019, 1, 15) + " days";
+						document.getElementById('PT').innerHTML = daysUntil(2019, 1, 17) + " days";
+						document.getElementById('Plum2').innerHTML = daysUntil(2019, 1, 22) + " days";
+						document.getElementById('Butler2').innerHTML = daysUntil(2019, 1, 24) + " days";
+						document.getElementById('Hempfield2').innerHTML = daysUntil(2019, 1, 29) + " days";
+						document.getElementById('Armstrong2').innerHTML = daysUntil(2019, 1, 31) + " days";
+						document.getElementById('PT2').innerHTML = daysUntil(2019, 2, 5) + " days";
 					}
 				};
-				xhttp.open("GET", "https://linuxfan1.github.io/miscripts/Rifle/navbar.html", true);
+				xhttp.open("GET", "/navbar.html", true);
 				xhttp.send();
+				mobileCheck();
 			}
+			
 		</script>
 	</head>
 
 	<body onload="return loadDoc();">
-		<div id="navbar">
+        <div id="navbar">
 		</div>
 		<div class="jumbotron">
-				<h1>Rifle Matches</h1>
-			<ul style="list-style-type:none;">
-				<li>
-						<h3>December 6th - Indiana vs. Wash (Home Match)</h3>
-						<h6>Score</h6>
-					<p>N/A</p>
-						<h6>Result</h6>
-					<p>N/A</p>
-				</li>
-				<li>
-						<h3>December 11th - Indiana vs. Trinity (Home Match)</h3>
-						<h6>Score</h6>
-					<p>N/A</p>
-						<h6>Result</h6>
-					<p>N/A</p>
-				</li>
-				<li>
-						<h3>December 18th - Indiana vs. WNC (Home Match)</h3>
-						<h6>Score</h6>
-					<p>N/A</p>
-						<h6>Result</h6>
-					<p>N/A</p>
-				</li>
-				<li>
-						<h3>December 20th - Indiana vs. USC (Home Match)</h3>
-						<h6>Score</h6>
-					<p>N/A</p>
-						<h6>Result</h6>
-					<p>N/A</p>
-				</li>
-			</ul>
+			<h1>Rifle Matches</h1>
+			<a class="mobile-show" style="display:none;" href="#previousMatch">Jump to previous match</a><br>
+			<a class="mobile-show" style="display:none;" href="#nextMatch">Jump to next match</a>
+			<div class="card-group">
+			<h1>December</h1>
+				<div class="card-deck">
+					<div class="card" id="nextMatch">
+						<img class="card-img-top" src="/Pictures/Unknown.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Indiana vs. Wash</h2>
+							<span class="badge badge-success">Home Match <span class="badge badge-light" id="Wash"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Trinity.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Indiana vs. Trinity</h2>
+							<span class="badge badge-success">Home Match <span class="badge badge-light" id="Trinity"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Unknown.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">WNC vs. Indiana</h2>
+							<span class="badge badge-danger">Away Match <span class="badge badge-light" id="WNC"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Unknown.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">USC vs. Indiana</h2>
+							<span class="badge badge-danger">Away Match <span class="badge badge-light" id="USC"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card mobile-hide">
+						<div class="card-body">
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card-group">		
+			<h1>January</h1>
+				<div class="card-deck">
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Plum.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Plum vs. Indiana</h2>
+							<span class="badge badge-danger">Away Match <span class="badge badge-light" id="Plum"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Butler.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Indiana vs. Butler</h2>
+							<span class="badge badge-success">Home Match <span class="badge badge-light" id="Butler"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Hempfield.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Hempfield vs. Indiana</h2>
+							<span class="badge badge-danger">Away Match <span class="badge badge-light" id="Hempfield"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Armstrong.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Armstrong vs. Indiana</h2>
+							<span class="badge badge-danger">Away Match <span class="badge badge-light" id="Armstrong"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/PennTrafford.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Indiana vs. Penn Trafford</h2>
+							<span class="badge badge-success">Home Match <span class="badge badge-light" id="PT"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="card-group">
+				<div class="card-deck">
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Plum.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Indiana vs. Plum</h2>
+							<span class="badge badge-success">Home Match <span class="badge badge-light" id="Plum2"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Butler.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Indiana vs. Butler</h2>
+							<span class="badge badge-danger">Away Match <span class="badge badge-light" id="Butler2"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Hempfield.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Hempfield vs. Indiana</h2>
+							<span class="badge badge-success">Home Match <span class="badge badge-light" id="Hempfield2"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/Armstrong.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Indiana vs. Armstrong</h2>
+							<span class="badge badge-success">Home Match <span class="badge badge-light" id="Armstrong2"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card mobile-hide">
+						<div class="card-body">
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<h1>February</h1>
+			<div class="card-group">
+				<div class="card-deck">
+					<div class="card" >
+						<img class="card-img-top" src="/Pictures/PennTrafford.png" alt="Card image">
+						<div class="card-body">
+							<h2 class="card-title">Penn Trafford vs. Indiana</h2>
+							<span class="badge badge-danger">Away Match <span class="badge badge-light" id="PT2"></span></span>
+							<h6>Score</h6>
+							<p>N/A</p>
+							<h6>Result</h6>
+							<p>N/A</p>
+						</div>
+					</div>
+					<div class="card mobile-hide" >
+						<img class="card-img-top" src="/Pictures/Blank.png" alt="Card image">
+						<div class="card-body">
+						</div>
+					</div>
+					<div class="card mobile-hide" >
+						<img class="card-img-top" src="/Pictures/Blank.png" alt="Card image">
+						<div class="card-body">
+						</div>
+					</div>
+					<div class="card mobile-hide" >
+						<img class="card-img-top" src="/Pictures/Blank.png" alt="Card image">
+						<div class="card-body">
+						</div>
+					</div>
+					<div class="card mobile-hide" >
+						<img class="card-img-top" src="/Pictures/Blank.png" alt="Card image">
+						<div class="card-body">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 

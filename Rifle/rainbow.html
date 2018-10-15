@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+		<meta name="theme-color" content="#343a40" id="metadata">
+		<meta name="msapplication-navbutton-color" content="#343a40">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#343a40">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--Bootstrap-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="icon" href="https://www.iasd.cc/pics/header_logo.png">
+		<title>Home - IHS Rifle</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<!--End Bootstrap-->
+		<style>
+			div.jumbotron {
+				margin:10px;
+				background:rgba(255, 255, 255, .6);
+			}
+		</style>
+        <script>
+            function daysUntil(year, month, day) {
+                var now = new Date(),
+                    dateEnd = new Date(year, month - 1, day),
+                    days = (dateEnd - now) / 1000 / 60 / 60 / 24;
+                return Math.round(days);
+            }
+        </script>
+		<script>
+			function loadDoc() {
+				setInterval(randomBackground, 500)
+			}
+			function header(element) {
+				document.getElementById(element).scrollIntoView();
+				scrollBy(0,-55);
+			}
+			function isMobileDevice() {
+				return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+			};
+			function mobileCheck() {
+				if (isMobileDevice() == true) {
+					var mobileHide = document.getElementsByClassName('mobile-hide');
+					var mobileChangeSize = document.getElementsByClassName('mobile-changeSize');
+					for (var i = 0; i < mobileHide.length; i++ ) {
+						mobileHide[i].style.display = "none";
+					}
+					for (var i = 0; i < mobileChangeSize.length; i++ ) {
+						mobileChangeSize[i].style.fontSize = "smaller";
+					}
+				}
+			}
+			function randomBackground() {
+				var theColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+				document.getElementById('metadata').content = theColor;
+				document.body.style.background = theColor;
+				
+			}
+		</script>
+	</head>
+
+    <body onload="return loadDoc();">
+    </body>
+
+</html>

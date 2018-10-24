@@ -11,6 +11,7 @@ function mobileCheck() {
 	if (isMobileDevice() == true) {
 		var mobileHide = document.getElementsByClassName('mobile-hide');
 		var mobileShow = document.getElementsByClassName('mobile-show');
+		var mobileTooWide = document.getElementsByClassName('mobile-tooWide');
 		var mobileChangeSize = document.getElementsByClassName('mobile-changeSize');
 		for (var i = 0; i < mobileHide.length; i++ ) {
 			mobileHide[i].style.display = "none";
@@ -20,6 +21,9 @@ function mobileCheck() {
 		}
 		for (var i = 0; i < mobileChangeSize.length; i++ ) {
 			mobileChangeSize[i].style.fontSize = "smaller";
+		}
+		for (var i = 0; i < mobileTooWide.length; i++ ) {
+			mobileTooWide[i].style.width = "100%"
 		}
 	}
 }

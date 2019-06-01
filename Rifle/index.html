@@ -2,6 +2,19 @@
 <html>
 
 	<head>
+		<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyBzfW-h74HcK0q_YxP2qy8ho734M09NUf8",
+				authDomain: "ihsrifle-30a97.firebaseapp.com",
+				databaseURL: "https://ihsrifle-30a97.firebaseio.com",
+				projectId: "ihsrifle-30a97",
+				storageBucket: "ihsrifle-30a97.appspot.com",
+				messagingSenderId: "798608007873"
+			};
+			firebase.initializeApp(config);
+		</script>
 		<meta name="theme-color" content="#343a40">
 		<meta name="msapplication-navbutton-color" content="#343a40">
 		<meta name="apple-mobile-web-app-status-bar-style" content="#343a40">
@@ -30,7 +43,7 @@
 					if (this.readyState == 4 && this.status == 200) {
 						document.getElementById("navbar").innerHTML =
 							this.responseText;
-						document.getElementById('daysuntilbadge').innerHTML = "Next Match - Home - December 6th - " + daysUntil(2018, 12, 6) + " days until"
+						document.getElementById('daysuntilbadge').innerHTML = "Next Match - Home - December 11th - " + daysUntil(2018, 12, 11) + " days until";
 					}
 				};
 				xhttp.open("GET", "navbar.html", true);

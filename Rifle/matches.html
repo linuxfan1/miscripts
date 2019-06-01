@@ -36,9 +36,8 @@
 					if (this.readyState == 4 && this.status == 200) {
 						document.getElementById("navbar").innerHTML =
 							this.responseText;
-						document.getElementById('daysuntilbadge').innerHTML = "Next Match - Home - December 6th - " + daysUntil(2018, 12, 6) + " days until";
+						document.getElementById('daysuntilbadge').innerHTML = "Next Match - Home - December 11th - " + daysUntil(2018, 12, 11) + " days until";
 						document.getElementById('matchresults').classList.add('active');
-						document.getElementById('Wash').innerHTML = daysUntil(2018, 12, 6) + " days";
 						document.getElementById('Trinity').innerHTML = daysUntil(2018, 12, 11) + " days";
 						document.getElementById('WNC').innerHTML = daysUntil(2018, 12, 18) + " days";
 						document.getElementById('USC').innerHTML = daysUntil(2018, 12, 20) + " days";
@@ -73,14 +72,14 @@
 			<h1>December</h1>
 				<div class="card-deck">
 					<div class="card" id="nextMatch">
-						<img class="card-img-top" src="/Pictures/Unknown.png" alt="Card image">
+						<img class="card-img-top" src="/Pictures/Washington.png" alt="Card image">
 						<div class="card-body">
-							<h2 class="card-title">Indiana vs. Wash</h2>
-							<span class="badge badge-success">Home Match <span class="badge badge-light" id="Wash"></span></span>
+							<h2 class="card-title">Indiana vs. Washington</h2>
+							<span class="badge badge-success">Home Match</span>
 							<h6>Score</h6>
-							<p>N/A</p>
+							<p><strong>793-61x Indiana </strong><br>793-43x Washington</p>
 							<h6>Result</h6>
-							<p>N/A</p>
+							<p>Win</p>
 						</div>
 					</div>
 					<div class="card" >
